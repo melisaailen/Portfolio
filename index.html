@@ -2,200 +2,2163 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Melisa García | Portfolio de People Analytics</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
-:root{--ink:#283618;--ink2:#5f6655;--muted:#BC6C25;--accent:#DDA15E;--paper:#FEFAE0;--white:#fff;--shadow:0 16px 45px rgba(40,54,24,.15);--radius:22px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--paper);color:var(--ink)}a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(254,250,224,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(40,54,24,.10)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.03em}.brand span{color:var(--muted)}nav a{margin-left:22px;font-size:14px;color:var(--ink2)}
-.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:700;cursor:pointer;background:var(--ink);color:#fff}.btn.alt{background:#fff;color:var(--ink);border:1px solid rgba(40,54,24,.14)}.btn.small{padding:9px 13px;font-size:13px}.btn.danger{background:#7d2b2b}.btn.ghost{background:transparent;color:var(--ink);border:1px solid rgba(40,54,24,.14)}
-.hero{padding:92px 0 70px;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);font-weight:800}h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:14px 0 22px}.lead{font-size:19px;line-height:1.65;color:var(--ink2);max-width:680px}.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
-.photo{aspect-ratio:1/1;border-radius:50%;background:linear-gradient(145deg,var(--ink),var(--muted));display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow);position:relative}.photo img{width:100%;height:100%;object-fit:cover;display:none}.photo .placeholder{color:#fff;text-align:center;padding:30px}.placeholder strong{display:block;font-size:70px;line-height:1}.placeholder small{opacity:.8}
-section{padding:76px 0;position:relative}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}h2{font-size:38px;letter-spacing:-.04em;margin:0}.sub{color:var(--ink2);line-height:1.6;max-width:700px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:rgba(255,255,255,.72);border:1px solid rgba(40,54,24,.10);border-radius:var(--radius);padding:28px;box-shadow:0 8px 28px rgba(40,54,24,.06)}.card h3{margin-top:0}.card p{color:var(--ink2);line-height:1.7}
-.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:8px 11px;border-radius:999px;background:#f8f1d8;font-size:13px;color:var(--ink2)}
-.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}.tab{border:1px solid rgba(40,54,24,.12);background:#fff;color:var(--ink);padding:11px 17px;border-radius:999px;cursor:pointer;font-weight:700;transition:.2s}.tab:hover{transform:translateY(-1px)}.tab.active{background:var(--ink);color:#fff}
-.projects{display:flex;gap:18px;overflow-x:auto;overflow-y:hidden;padding:4px 2px 16px;scroll-snap-type:x proximity;scrollbar-width:thin}.projects::-webkit-scrollbar{height:9px}.projects::-webkit-scrollbar-track{background:rgba(40,54,24,.06);border-radius:999px}.projects::-webkit-scrollbar-thumb{background:rgba(40,54,24,.24);border-radius:999px}.project{background:#fff;border-radius:20px;padding:23px;border:1px solid rgba(40,54,24,.10);display:flex;flex-direction:column;min-height:250px;flex:0 0 min(320px,calc(33.333vw - 24px));scroll-snap-align:start;box-shadow:0 8px 28px rgba(40,54,24,.06);cursor:pointer;transition:.2s}.project:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(40,54,24,.11)}.project .type{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:800}.project h3{margin:10px 0}.project p{color:var(--ink2);line-height:1.55;font-size:14px;flex:1}.project-preview-thumb{height:118px;border-radius:14px;background:linear-gradient(135deg,#f3edcf,#fff8dc);border:1px solid rgba(40,54,24,.08);margin:0 0 15px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.project-preview-thumb img{width:100%;height:100%;object-fit:contain;padding:9px}.preview-badge{position:absolute;left:10px;top:10px;padding:6px 8px;border-radius:999px;background:rgba(40,54,24,.9);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em}.preview-placeholder{display:grid;place-items:center;text-align:center;padding:20px;color:var(--ink2);font-size:13px}.project-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--ink2)}
-.full{grid-column:1/-1}.hidden{display:none!important}.notice{padding:12px 15px;border-radius:12px;background:#f7f7f7;margin:12px 0;color:var(--ink2);font-size:13px}.notice.warn{background:#fff4e5;color:#744a10}.notice.ok{background:#edf7ee;color:#315d36}
-.linkedin-link{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:#0a66c2;color:#fff;margin-left:12px;transition:.2s;vertical-align:middle;overflow:hidden}.linkedin-link:hover{transform:translateY(-2px);background:#004182}.linkedin-link svg{width:24px;height:24px;fill:currentColor}
-.contact-card{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}.contact-main{display:grid;gap:5px;font-family:'Manrope',Inter,ui-sans-serif,system-ui,sans-serif}.contact-main strong{font-size:18px;font-weight:700;letter-spacing:-.01em}.contact-main span{color:var(--ink2);font-weight:500}.contact-link{font-weight:700;color:var(--ink2)}.contact-label{font-family:'Manrope',Inter,ui-sans-serif,system-ui,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--muted)}.contact-main a{display:inline-flex;align-items:center;gap:8px;width:max-content;font-family:'Manrope',Inter,ui-sans-serif,system-ui,sans-serif}
-.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.56);backdrop-filter:blur(5px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}.modal-backdrop.hidden{display:none!important}.modal-box{background:#fff;color:var(--ink);border-radius:24px;padding:28px;width:min(900px,100%);max-height:88vh;overflow-y:auto;box-shadow:0 25px 70px rgba(0,0,0,.25)}.modal-box.compact{width:min(620px,100%)}.modal-box h3{margin-top:0;margin-bottom:8px;font-size:26px}.modal-sub{color:var(--ink2);line-height:1.6;margin-top:0}.modal-preview{border-radius:18px;background:#f7f0d9;border:1px solid rgba(40,54,24,.08);min-height:260px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;margin:18px 0}.modal-preview img{width:100%;height:auto;max-height:480px;object-fit:contain;display:none}.modal-preview .preview-placeholder{min-height:260px}.modal-preview .preview-badge{top:12px;left:12px}.modal-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:24px}.modal-meta{display:grid;gap:10px;align-content:start}.modal-meta .meta-item{background:#faf8ef;border:1px solid rgba(40,54,24,.08);padding:13px;border-radius:14px}.modal-meta strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}.modal-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:24px}.close-x{float:right;border:0;background:#f1ecdb;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;color:var(--ink)}.story{white-space:pre-line;line-height:1.75;color:var(--ink2)}
-footer{padding:45px 0;border-top:1px solid rgba(40,54,24,.1);color:var(--ink2);font-size:13px;position:relative}
-.faro-fab{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:3;border:0;border-radius:999px;padding:13px 18px;background:#8e38ba;color:#fff;font:700 14px Inter,system-ui,sans-serif;box-shadow:0 10px 28px rgba(40,54,24,.28);cursor:pointer}.faro-chat{display:none;position:fixed;left:22px;bottom:22px;z-index:1201;width:min(370px,calc(100vw - 28px));height:min(550px,calc(100vh - 105px));background:#fff;border:1px solid rgba(40,54,24,.15);border-radius:20px;box-shadow:0 18px 55px rgba(40,54,24,.28);overflow:hidden;flex-direction:column}.faro-chat.open{display:flex}.faro-chat-head{display:flex;align-items:center;gap:10px;padding:12px 15px;background:#283618;color:#fff}.faro-chat-head img{width:38px;height:38px}.faro-chat-head button{margin-left:auto;border:0;border-radius:50%;width:34px;height:34px;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}.faro-chat-head .faro-restart{width:auto;flex:none;margin-left:auto;padding:0 10px;border-radius:999px;font-size:12px;font-weight:700}.faro-chat-head #faroClose{margin-left:0;flex:none}.faro-demo-note{padding:9px 12px;background:#fff4df;color:#744a10;font-size:12px;line-height:1.45}.faro-messages{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:9px}.faro-bubble{max-width:88%;padding:10px 12px;border-radius:14px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45;font-size:14px}.faro-bubble.bot{align-self:flex-start;background:#f3f0e5;color:var(--ink)}.faro-bubble.user{align-self:flex-end;background:#e9d7f1;color:#392346}.faro-chat-form{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(40,54,24,.12)}.faro-chat-form input{min-width:0;flex:1;padding:11px;border:1px solid rgba(40,54,24,.24);border-radius:11px;font:14px Inter,system-ui,sans-serif}.faro-chat-form button{border:0;border-radius:11px;padding:0 15px;background:#283618;color:#fff;font-weight:700;cursor:pointer}.faro-chat-form button:disabled{opacity:.6}.faro-chat-status{padding:0 12px 8px;color:var(--ink2);font-size:11px}
-@media(max-width:800px){.hero,.about,.modal-grid{grid-template-columns:1fr}.project{flex-basis:min(86vw,320px)}.photo{max-width:360px}.section-head{display:block}.nav nav{display:none}.modal-preview{min-height:200px}}
-@media(max-width:520px){.faro-chat{left:12px;bottom:12px;width:calc(100vw - 24px);height:min(560px,calc(100vh - 88px))}}
-.faro-modal-launch{margin-right:auto!important;background:#ffcf45!important;color:#283618!important;border:1px solid #e8b82d!important}.faro-modal-launch:hover{background:#ffd966!important}
+
+:root{
+  --blue-slate:#4f6d7a;
+  --pale-sky:#c0d6df;
+  --alice-blue:#dbe9ee;
+  --smart-blue:#4a6fa5;
+  --baltic-blue:#166088;
+
+  --ink:#183b4a;
+  --ink2:#4f6d7a;
+  --muted:#4a6fa5;
+  --accent:#166088;
+  --paper:#dbe9ee;
+  --white:#fff;
+
+  --shadow:0 16px 45px rgba(22,96,136,.15);
+  --radius:22px;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(219,233,238,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(22,96,136,.12);
+}
+
+.nav{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+
+.brand span{
+  color:var(--smart-blue);
+}
+
+nav a{
+  margin-left:22px;
+  font-size:14px;
+  color:var(--blue-slate);
+}
+
+nav a:hover{
+  color:var(--baltic-blue);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+  border:0;
+  border-radius:999px;
+  padding:12px 18px;
+  font-weight:700;
+  cursor:pointer;
+  background:var(--baltic-blue);
+  color:#fff;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  background:var(--smart-blue);
+}
+
+.btn.alt{
+  background:#fff;
+  color:var(--baltic-blue);
+  border:1px solid rgba(22,96,136,.18);
+}
+
+.btn.small{
+  padding:9px 13px;
+  font-size:13px;
+}
+
+.btn.danger{
+  background:#7d2b2b;
+}
+
+.btn.ghost{
+  background:transparent;
+  color:var(--ink);
+  border:1px solid rgba(22,96,136,.14);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  padding:92px 0 70px;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:55px;
+  align-items:center;
+}
+
+.kicker{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  color:var(--smart-blue);
+  font-weight:800;
+}
+
+h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:.98;
+  letter-spacing:-.055em;
+  margin:14px 0 22px;
+}
+
+.lead{
+  font-size:19px;
+  line-height:1.65;
+  color:var(--blue-slate);
+  max-width:680px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+
+.photo{
+  aspect-ratio:1/1;
+  border-radius:50%;
+  background:linear-gradient(
+    145deg,
+    var(--baltic-blue),
+    var(--smart-blue)
+  );
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:none;
+}
+
+.photo .placeholder{
+  color:#fff;
+  text-align:center;
+  padding:30px;
+}
+
+.placeholder strong{
+  display:block;
+  font-size:70px;
+  line-height:1;
+}
+
+.placeholder small{
+  opacity:.8;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  padding:76px 0;
+  position:relative;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:end;
+  margin-bottom:28px;
+}
+
+h2{
+  font-size:38px;
+  letter-spacing:-.04em;
+  margin:0;
+}
+
+.sub{
+  color:var(--blue-slate);
+  line-height:1.6;
+  max-width:700px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(22,96,136,.10);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 8px 28px rgba(22,96,136,.06);
+}
+
+.card h3{
+  margin-top:0;
+}
+
+.card p{
+  color:var(--blue-slate);
+  line-height:1.7;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.tag{
+  padding:8px 11px;
+  border-radius:999px;
+  background:var(--pale-sky);
+  font-size:13px;
+  color:var(--baltic-blue);
+}
+
+/* =========================
+   TABS
+========================= */
+
+.tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:25px 0;
+}
+
+.tab{
+  border:1px solid rgba(22,96,136,.12);
+  background:#fff;
+  color:var(--ink);
+  padding:11px 17px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:700;
+  transition:.2s;
+}
+
+.tab:hover{
+  transform:translateY(-1px);
+}
+
+.tab.active{
+  background:var(--baltic-blue);
+  color:#fff;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  padding:4px 2px 16px;
+  scroll-snap-type:x proximity;
+  scrollbar-width:thin;
+}
+
+.projects::-webkit-scrollbar{
+  height:9px;
+}
+
+.projects::-webkit-scrollbar-track{
+  background:rgba(22,96,136,.06);
+  border-radius:999px;
+}
+
+.projects::-webkit-scrollbar-thumb{
+  background:rgba(22,96,136,.24);
+  border-radius:999px;
+}
+
+.project{
+  background:#fff;
+  border-radius:20px;
+  padding:23px;
+  border:1px solid rgba(22,96,136,.10);
+  display:flex;
+  flex-direction:column;
+  min-height:250px;
+  flex:0 0 min(320px,calc(33.333vw - 24px));
+  scroll-snap-align:start;
+  box-shadow:0 8px 28px rgba(22,96,136,.06);
+  cursor:pointer;
+  transition:.2s;
+}
+
+.project:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(22,96,136,.14);
+}
+
+.project .type{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--smart-blue);
+  font-weight:800;
+}
+
+.project h3{
+  margin:10px 0;
+}
+
+.project p{
+  color:var(--blue-slate);
+  line-height:1.55;
+  font-size:14px;
+  flex:1;
+}
+
+.project-preview-thumb{
+  height:118px;
+  border-radius:14px;
+  background:linear-gradient(
+    135deg,
+    var(--alice-blue),
+    var(--pale-sky)
+  );
+  border:1px solid rgba(22,96,136,.08);
+  margin:0 0 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.project-preview-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:9px;
+}
+
+.preview-badge{
+  position:absolute;
+  left:10px;
+  top:10px;
+  padding:6px 8px;
+  border-radius:999px;
+  background:var(--baltic-blue);
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+
+.preview-placeholder{
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:20px;
+  color:var(--blue-slate);
+  font-size:13px;
+}
+
+.project-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.empty{
+  grid-column:1/-1;
+  text-align:center;
+  padding:50px;
+  color:var(--blue-slate);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.contact-main{
+  display:grid;
+  gap:5px;
+  font-family:'Manrope',Inter,sans-serif;
+}
+
+.contact-main strong{
+  font-size:18px;
+  font-weight:700;
+}
+
+.contact-main span{
+  color:var(--blue-slate);
+  font-weight:500;
+}
+
+.contact-link{
+  font-weight:700;
+  color:var(--blue-slate);
+}
+
+.contact-label{
+  font-family:'Manrope',Inter,sans-serif;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:800;
+  color:var(--smart-blue);
+}
+
+.contact-main a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  width:max-content;
+  font-family:'Manrope',Inter,sans-serif;
+}
+
+/* =========================
+   LINKEDIN
+========================= */
+
+.linkedin-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  background:var(--baltic-blue);
+  color:#fff;
+  margin-left:12px;
+  transition:.2s;
+  vertical-align:middle;
+  overflow:hidden;
+}
+
+.linkedin-link:hover{
+  transform:translateY(-2px);
+  background:var(--smart-blue);
+}
+
+.linkedin-link svg{
+  width:24px;
+  height:24px;
+  fill:currentColor;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(15,45,58,.58);
+  backdrop-filter:blur(5px);
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal-backdrop.hidden{
+  display:none!important;
+}
+
+.modal-box{
+  background:#fff;
+  color:var(--ink);
+  border-radius:24px;
+  padding:28px;
+  width:min(900px,100%);
+  max-height:88vh;
+  overflow-y:auto;
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+
+.modal-box h3{
+  margin-top:0;
+  margin-bottom:8px;
+  font-size:26px;
+}
+
+.modal-sub{
+  color:var(--blue-slate);
+  line-height:1.6;
+  margin-top:0;
+}
+
+.modal-preview{
+  border-radius:18px;
+  background:var(--alice-blue);
+  border:1px solid rgba(22,96,136,.08);
+  min-height:260px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+  margin:18px 0;
+}
+
+.modal-preview img{
+  width:100%;
+  height:auto;
+  max-height:480px;
+  object-fit:contain;
+  display:none;
+}
+
+.modal-preview .preview-placeholder{
+  min-height:260px;
+}
+
+.modal-grid{
+  display:grid;
+  grid-template-columns:1.4fr .6fr;
+  gap:24px;
+}
+
+.modal-meta{
+  display:grid;
+  gap:10px;
+  align-content:start;
+}
+
+.modal-meta .meta-item{
+  background:var(--alice-blue);
+  border:1px solid rgba(22,96,136,.08);
+  padding:13px;
+  border-radius:14px;
+}
+
+.modal-meta strong{
+  display:block;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--smart-blue);
+  margin-bottom:4px;
+}
+
+.modal-actions{
+  display:flex;
+  gap:10px;
+  justify-content:flex-end;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+
+.close-x{
+  float:right;
+  border:0;
+  background:var(--alice-blue);
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+  color:var(--ink);
+}
+
+.story{
+  white-space:pre-line;
+  line-height:1.75;
+  color:var(--blue-slate);
+}
+
+.hidden{
+  display:none!important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:45px 0;
+  border-top:1px solid rgba(22,96,136,.1);
+  color:var(--blue-slate);
+  font-size:13px;
+  position:relative;
+}
+
+/* =========================
+   FARO CHAT
+========================= */
+
+.faro-chat{
+  display:none;
+  position:fixed;
+  left:22px;
+  bottom:22px;
+  z-index:1201;
+  width:min(370px,calc(100vw - 28px));
+  height:min(550px,calc(100vh - 105px));
+  background:#fff;
+  border:1px solid rgba(22,96,136,.15);
+  border-radius:20px;
+  box-shadow:0 18px 55px rgba(22,96,136,.28);
+  overflow:hidden;
+  flex-direction:column;
+}
+
+.faro-chat.open{
+  display:flex;
+}
+
+.faro-chat-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 15px;
+  background:var(--baltic-blue);
+  color:#fff;
+}
+
+.faro-chat-head img{
+  width:38px;
+  height:38px;
+}
+
+.faro-chat-head button{
+  margin-left:auto;
+  border:0;
+  border-radius:50%;
+  width:34px;
+  height:34px;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.faro-chat-head .faro-restart{
+  width:auto;
+  flex:none;
+  margin-left:auto;
+  padding:0 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.faro-chat-head #faroClose{
+  margin-left:0;
+  flex:none;
+}
+
+.faro-demo-note{
+  padding:9px 12px;
+  background:var(--alice-blue);
+  color:var(--baltic-blue);
+  font-size:12px;
+  line-height:1.45;
+}
+
+.faro-messages{
+  flex:1;
+  overflow:auto;
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  background:#fff;
+}
+
+.faro-bubble{
+  max-width:88%;
+  padding:10px 12px;
+  border-radius:14px;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  line-height:1.45;
+  font-size:14px;
+}
+
+.faro-bubble.bot{
+  align-self:flex-start;
+  background:var(--alice-blue);
+  color:var(--ink);
+}
+
+.faro-bubble.user{
+  align-self:flex-end;
+  background:var(--pale-sky);
+  color:var(--baltic-blue);
+}
+
+.faro-chat-form{
+  display:flex;
+  gap:8px;
+  padding:10px;
+  border-top:1px solid rgba(22,96,136,.12);
+  background:#fff;
+}
+
+.faro-chat-form input{
+  min-width:0;
+  flex:1;
+  padding:11px;
+  border:1px solid rgba(22,96,136,.24);
+  border-radius:11px;
+  font:14px Inter,sans-serif;
+  outline:none;
+}
+
+.faro-chat-form input:focus{
+  border-color:var(--smart-blue);
+  box-shadow:0 0 0 3px rgba(74,111,165,.12);
+}
+
+.faro-chat-form button{
+  border:0;
+  border-radius:11px;
+  padding:0 15px;
+  background:var(--baltic-blue);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.faro-chat-form button:hover{
+  background:var(--smart-blue);
+}
+
+.faro-chat-form button:disabled{
+  opacity:.6;
+}
+
+.faro-chat-status{
+  padding:0 12px 8px;
+  color:var(--blue-slate);
+  font-size:11px;
+}
+
+/* =========================
+   FARO MODAL BUTTON
+========================= */
+
+.faro-modal-launch{
+  margin-right:auto!important;
+  background:var(--smart-blue)!important;
+  color:#fff!important;
+  border:1px solid var(--baltic-blue)!important;
+}
+
+.faro-modal-launch:hover{
+  background:var(--baltic-blue)!important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+  .hero,
+  .about,
+  .modal-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project{
+    flex-basis:min(86vw,320px);
+  }
+
+  .photo{
+    max-width:360px;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .nav nav{
+    display:none;
+  }
+
+  .modal-preview{
+    min-height:200px;
+  }
+}
+
+@media(max-width:520px){
+
+  .faro-chat{
+    left:12px;
+    bottom:12px;
+    width:calc(100vw - 24px);
+    height:min(560px,calc(100vh - 88px));
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="container nav">
-<a class="brand" href="#inicio">Melisa García <span>Portfolio</span></a>
-<nav>
-<a href="#sobre-mi" id="t_nav_about">Sobre mí</a>
-<a href="#proyectos" id="t_nav_projects">Proyectos</a>
-<a href="#contacto" id="t_nav_contact">Contacto</a>
-<a aria-label="LinkedIn" class="linkedin-link" href="https://www.linkedin.com/in/melisaailengarcia/" rel="noopener" target="_blank" title="LinkedIn">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 1-1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 1-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+
+<a class="brand" href="#inicio">
+  Melisa García <span>Portfolio</span>
 </a>
+
+<nav>
+
+<a href="#sobre-mi">Sobre mí</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+
+<a
+aria-label="LinkedIn"
+class="linkedin-link"
+href="https://www.linkedin.com/in/melisaailengarcia/"
+rel="noopener"
+target="_blank"
+title="LinkedIn">
+
+<svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 1-1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 1-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+</svg>
+
+</a>
+
 </nav>
 </div>
 </header>
+
 <main>
+
+<!-- HERO -->
+
 <section class="hero container" id="inicio">
+
 <div>
-<div class="kicker" id="t_hero_kicker">RRHH · People Analytics · HR Tech</div>
-<h1 id="t_hero_title">Personas, datos y tecnología.</h1>
-<p class="lead" id="t_hero_text"></p>
-<div class="hero-actions"><a class="btn" href="#proyectos" id="t_hero_projects">Ver proyectos</a><a class="btn alt" href="#sobre-mi" id="t_hero_about">Conoceme</a></div>
+
+<div class="kicker">
+RRHH · People Analytics · HR Tech
 </div>
-<div class="photo"><img alt="Foto de perfil" id="profileImage"/><div class="placeholder" id="photoPlaceholder"><strong>+</strong><small id="t_photo_placeholder">Tu foto de perfil</small></div></div>
+
+<h1>
+Personas, datos y tecnología.
+</h1>
+
+<p class="lead">
+Portfolio profesional orientado a integrar Recursos Humanos,
+análisis de datos y herramientas digitales para transformar
+información en conocimiento útil para la gestión.
+</p>
+
+<div class="hero-actions">
+
+<a class="btn" href="#proyectos">
+Ver proyectos
+</a>
+
+<a class="btn alt" href="#sobre-mi">
+Conoceme
+</a>
+
+</div>
+
+</div>
+
+<div class="photo">
+
+<div class="placeholder">
+<strong>+</strong>
+<small>Tu foto de perfil</small>
+</div>
+
+</div>
+
 </section>
+
+<!-- SOBRE MI -->
+
 <section id="sobre-mi">
-<div class="container"><div class="section-head"><div><div class="kicker" id="t_about_kicker">Presentación</div><h2 id="t_about_heading">Acerca de mí</h2></div></div>
-<div class="about">
-<article class="card"><h3 id="t_about_title"></h3><p id="t_about_text"></p></article>
-<article class="card"><h3 id="t_goal_heading">Hacia dónde apunto</h3><p id="t_goal_text"></p><div class="tags"><span class="tag" id="t_tag_people">People Analytics</span><span class="tag" id="t_tag_excel">Excel</span><span class="tag" id="t_tag_powerbi">Power BI</span><span class="tag" id="t_tag_hrtech">HR Tech</span><span class="tag" id="t_tag_ia">IA aplicada</span></div></article>
-</div></div>
-</section>
-<section id="proyectos">
+
 <div class="container">
-<div class="section-head"><div><div class="kicker" id="t_projects_kicker">Portfolio</div><h2 id="t_projects_heading">Mis proyectos</h2><p class="sub" id="t_projects_sub">Explorá proyectos de análisis, visualización y aplicaciones digitales orientadas a Recursos Humanos.</p></div></div>
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Presentación
+</div>
+
+<h2>
+Acerca de mí
+</h2>
+
+</div>
+
+</div>
+
+<div class="about">
+
+<article class="card">
+
+<h3>
+Quién soy
+</h3>
+
+<p>
+Soy estudiante de Relaciones del Trabajo, con interés en el desarrollo
+del talento, People Analytics y el uso de herramientas digitales
+aplicadas a Recursos Humanos.
+</p>
+
+</article>
+
+<article class="card">
+
+<h3>
+Hacia dónde apunto
+</h3>
+
+<p>
+Busco desarrollar un perfil que combine conocimientos de RRHH
+con análisis de datos, visualización e innovación aplicada
+a la gestión de personas.
+</p>
+
+<div class="tags">
+
+<span class="tag">People Analytics</span>
+<span class="tag">Excel</span>
+<span class="tag">Power BI</span>
+<span class="tag">HR Tech</span>
+<span class="tag">IA aplicada</span>
+
+</div>
+
+</article>
+
+</div>
+</div>
+
+</section>
+
+<!-- PROYECTOS -->
+
+<section id="proyectos">
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Portfolio
+</div>
+
+<h2>
+Mis proyectos
+</h2>
+
+<p class="sub">
+Explorá proyectos de análisis, visualización y aplicaciones
+digitales orientadas a Recursos Humanos.
+</p>
+
+</div>
+
+</div>
+
 <div class="tabs">
-<button class="tab active" data-cat="HR Tech" id="t_tab_hrtech">HR Tech</button>
-<button class="tab" data-cat="Excel" id="t_tab_excel">Excel</button>
-<button class="tab" data-cat="Power BI" id="t_tab_powerbi">Power BI</button>
+
+<button class="tab active" data-cat="HR Tech">
+HR Tech
+</button>
+
+<button class="tab" data-cat="Excel">
+Excel
+</button>
+
+<button class="tab" data-cat="Power BI">
+Power BI
+</button>
+
 </div>
+
 <div class="projects" id="projectList"></div>
+
 </div>
+
 </section>
+
+<!-- CONTACTO -->
+
 <section id="contacto">
-<div class="container"><div class="section-head"><div><div class="kicker" id="t_contact_kicker">Contacto</div><h2 id="t_contact_heading">Información de contacto</h2></div></div>
-<div class="card contact-card"><div class="contact-main"><div><span class="contact-label">E-mail</span></div><a class="contact-link" href="mailto:garcia.melisa.98@gmail.com" id="contactEmailLink"><strong id="t_contact_email">garcia.melisa.98@gmail.com</strong></a><a class="contact-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rosario%2C%20Santa%20Fe%2C%20Argentina" id="contactLocationLink" rel="noopener" target="_blank"><span id="t_contact_location">Rosario, Santa Fe, Argentina</span></a></div>
-<a aria-label="Perfil de LinkedIn" class="linkedin-link" href="https://www.linkedin.com/in/melisaailengarcia/" rel="noopener" target="_blank" title="LinkedIn"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 1-1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 1-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg></a>
-</div></div>
-</section>
-</main>
-<footer><div class="container" id="t_footer_text">Melisa García · Portfolio de People Analytics · RRHH · HR Tech</div></footer>
-<div aria-labelledby="projectModalTitle" aria-modal="true" class="modal-backdrop hidden" id="projectModal" role="dialog">
-<div class="modal-box"><button aria-label="Cerrar" class="close-x" onclick="closeProjectModal()">×</button><div class="kicker" id="projectModalType">VISTA PREVIA</div><h3 id="projectModalTitle">Proyecto</h3><p class="modal-sub" id="projectModalDesc"></p><div class="modal-grid"><div><div class="modal-preview"><div class="preview-badge">VISTA PREVIA</div><img alt="Vista previa del proyecto" id="projectModalImage"/><div class="preview-placeholder" id="projectModalPlaceholder">Todavía no se cargó una imagen de vista previa.</div></div><div class="story" id="projectModalStory"></div></div><div class="modal-meta"><div class="meta-item"><strong>Área</strong><span id="projectModalCat"></span></div></div></div><div class="modal-actions"><button type="button" class="btn small faro-modal-launch hidden" id="faroModalOpen"><span aria-hidden="true">&#10024;</span> Conversar con Faro</button><button class="btn alt small" onclick="closeProjectModal()">Cerrar</button><a class="btn small hidden" href="#" id="projectDownload" rel="noopener" target="_blank">Descargar archivo</a></div></div>
+
+<div class="container">
+
+<div class="section-head">
+
+<div>
+
+<div class="kicker">
+Contacto
 </div>
-<aside class="faro-chat" id="faroChat" aria-label="Chat de demostración con Faro">
-  <div class="faro-chat-head"><img id="faroChatLogo" alt="Logo de Faro"><strong>Faro · HR Tech</strong><button id="faroRestart" class="faro-restart" type="button" aria-label="Reiniciar conversación">↻ Reiniciar</button><button id="faroClose" type="button" aria-label="Cerrar chat">×</button></div>
-  <div class="faro-demo-note">Demo de portfolio: no corresponde a una búsqueda real ni decide contrataciones. El envío de emails requiere conectar n8n.</div>
-  <div class="faro-messages" id="faroMessages" role="log" aria-live="polite"></div>
-  <div class="faro-chat-status" id="faroStatus">Demostración local</div>
-  <form class="faro-chat-form" id="faroForm"><input id="faroInput" autocomplete="off" placeholder="Escribí un mensaje…" aria-label="Mensaje para Faro"><button id="faroSend" type="submit">Enviar</button></form>
+
+<h2>
+Información de contacto
+</h2>
+
+</div>
+
+</div>
+
+<div class="card contact-card">
+
+<div class="contact-main">
+
+<div>
+<span class="contact-label">
+E-mail
+</span>
+</div>
+
+<a
+class="contact-link"
+href="mailto:garcia.melisa.98@gmail.com">
+
+<strong>
+garcia.melisa.98@gmail.com
+</strong>
+
+</a>
+
+<a
+class="contact-link"
+href="https://www.google.com/maps/search/?api=1&query=Rosario%2C%20Santa%20Fe%2C%20Argentina"
+rel="noopener"
+target="_blank">
+
+<span>
+Rosario, Santa Fe, Argentina
+</span>
+
+</a>
+
+</div>
+
+<a
+aria-label="Perfil de LinkedIn"
+class="linkedin-link"
+href="https://www.linkedin.com/in/melisaailengarcia/"
+rel="noopener"
+target="_blank"
+title="LinkedIn">
+
+<svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 1-1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 1-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+</svg>
+
+</a>
+
+</div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="container">
+Melisa García · Portfolio de People Analytics · RRHH · HR Tech
+</div>
+
+</footer>
+
+<!-- =========================
+     MODAL PROYECTO
+========================= -->
+
+<div
+aria-modal="true"
+class="modal-backdrop hidden"
+id="projectModal"
+role="dialog">
+
+<div class="modal-box">
+
+<button
+aria-label="Cerrar"
+class="close-x"
+onclick="closeProjectModal()">
+×
+</button>
+
+<div class="kicker" id="projectModalType">
+HR TECH
+</div>
+
+<h3 id="projectModalTitle">
+Faro RRHH
+</h3>
+
+<p class="modal-sub" id="projectModalDesc"></p>
+
+<div class="modal-grid">
+
+<div>
+
+<div class="modal-preview">
+
+<div class="preview-badge">
+VISTA PREVIA
+</div>
+
+<img
+alt="Vista previa del proyecto"
+id="projectModalImage"/>
+
+<div
+class="preview-placeholder"
+id="projectModalPlaceholder">
+Vista previa de Faro RRHH
+</div>
+
+</div>
+
+<div class="story" id="projectModalStory"></div>
+
+</div>
+
+<div class="modal-meta">
+
+<div class="meta-item">
+
+<strong>
+Área
+</strong>
+
+<span id="projectModalCat">
+HR Tech
+</span>
+
+</div>
+
+<div class="meta-item">
+
+<strong>
+Tecnologías
+</strong>
+
+<span>
+HTML · JavaScript · n8n · IA
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal-actions">
+
+<button
+type="button"
+class="btn small faro-modal-launch"
+id="faroModalOpen">
+
+✨ Conversar con Faro
+
+</button>
+
+<button
+class="btn alt small"
+onclick="closeProjectModal()">
+
+Cerrar
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     FARO CHAT
+========================= -->
+
+<aside
+class="faro-chat"
+id="faroChat"
+aria-label="Chat de demostración con Faro">
+
+<div class="faro-chat-head">
+
+<img
+id="faroChatLogo"
+alt="Logo de Faro">
+
+<strong>
+Faro · HR Tech
+</strong>
+
+<button
+id="faroRestart"
+class="faro-restart"
+type="button">
+
+↻ Reiniciar
+
+</button>
+
+<button
+id="faroClose"
+type="button"
+aria-label="Cerrar chat">
+
+×
+
+</button>
+
+</div>
+
+<div class="faro-demo-note">
+
+Demo de portfolio: Faro automatiza una entrevista inicial.
+No decide contrataciones. La conexión con n8n permite procesar
+las respuestas y automatizar acciones posteriores.
+
+</div>
+
+<div
+class="faro-messages"
+id="faroMessages"
+role="log"
+aria-live="polite">
+</div>
+
+<div
+class="faro-chat-status"
+id="faroStatus">
+
+Demostración local
+
+</div>
+
+<form
+class="faro-chat-form"
+id="faroForm">
+
+<input
+id="faroInput"
+autocomplete="off"
+placeholder="Escribí un mensaje…"
+aria-label="Mensaje para Faro">
+
+<button
+id="faroSend"
+type="submit">
+
+Enviar
+
+</button>
+
+</form>
+
 </aside>
+
 <script>
-// El SVG está incrustado para que el logo no dependa de una ruta de imagen adicional.
-const faroLogoData='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#803fe0"/><stop offset="1" stop-color="#e347a9"/></linearGradient></defs><path d="M50 3 91 26v48L50 97 9 74V26z" fill="url(#g)" stroke="#dba9ff" stroke-width="2"/><path d="M34 72V28h35v9H45v9h21v9H45v17z" fill="#fff"/><circle cx="69" cy="57" r="7" fill="#ffcf45"/></svg>');
-const DEFAULT={
-  profile:{hero:'Portfolio profesional orientado a integrar Recursos Humanos, análisis de datos y herramientas digitales para transformar información en conocimiento útil para la gestión.',aboutTitle:'Quién soy',about:'Soy estudiante de Relaciones del Trabajo, con interés en el desarrollo del talento, People Analytics y el uso de herramientas digitales aplicadas a Recursos Humanos.',goal:'Busco desarrollar un perfil que combine conocimientos de RRHH con análisis de datos, visualización e innovación aplicada a la gestión de personas.',image:''},
-  projects:[
-    {id:'faro',cat:'HR Tech',name:'Faro',desc:'Chatbot demostrativo de entrevistas iniciales. Organiza las respuestas con n8n y prepara un resumen para revisión de RRHH.',story:'Faro simula una entrevista inicial para atención al cliente. La conversación se envía a n8n, que organiza las respuestas y prepara un resumen para el equipo de RRHH. Luego de que RRHH revise y registre el resultado, n8n puede enviar por email el aviso correspondiente: los próximos pasos o el cierre de este proceso, invitando a postularse a futuras búsquedas. Faro no decide contrataciones. Esta demo de portfolio no corresponde a una vacante real, no guarda respuestas ni envía emails.',image:faroLogoData,file:'',web:'',imageBlobId:'',fileBlobId:''}
-  ]
+
+/* =========================================================
+   LOGO FARO
+========================================================= */
+
+const faroLogoData =
+'data:image/svg+xml;charset=UTF-8,' +
+encodeURIComponent(`
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+<defs>
+
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+
+<stop stop-color="#166088"/>
+
+<stop offset="1" stop-color="#4a6fa5"/>
+
+</linearGradient>
+
+</defs>
+
+<path
+d="M50 3 91 26v48L50 97 9 74V26z"
+fill="url(#g)"
+stroke="#c0d6df"
+stroke-width="2"/>
+
+<path
+d="M34 72V28h35v9H45v9h21v9H45v17z"
+fill="#fff"/>
+
+<circle
+cx="69"
+cy="57"
+r="7"
+fill="#dbe9ee"/>
+
+</svg>
+
+`);
+
+
+/* =========================================================
+   PROYECTO FARO
+========================================================= */
+
+const faroProject = {
+
+id:'faro',
+
+cat:'HR Tech',
+
+name:'Faro RRHH',
+
+desc:
+'Chatbot demostrativo de entrevistas laborales iniciales que automatiza la primera etapa del proceso de selección.',
+
+story:
+`Faro RRHH es un chatbot de entrevistas laborales que automatiza la primera etapa de un proceso de selección.
+
+El candidato interactúa con Faro mediante una conversación guiada. Las respuestas pueden enviarse mediante un Webhook a n8n, que funciona como herramienta de automatización y conecta las distintas partes del proceso.
+
+n8n puede recibir la información, procesarla, generar un resumen de la entrevista y posteriormente ejecutar acciones como guardar información o enviar un correo electrónico de seguimiento.
+
+Faro no decide contrataciones. La decisión continúa estando en manos del equipo de Recursos Humanos.
+
+Esta demostración forma parte del portfolio y no corresponde a una búsqueda laboral real.`,
+
+image:faroLogoData
+
 };
-const TEXT_DEFAULTS={nav_about:'Sobre mí',nav_projects:'Proyectos',nav_contact:'Contacto',hero_kicker:'RRHH · People Analytics · HR Tech',hero_title:'Personas, datos y tecnología.',hero_projects:'Ver proyectos',hero_about:'Conoceme',photo_placeholder:'Tu foto de perfil',about_kicker:'Presentación',about_heading:'Acerca de mí',goal_heading:'Hacia dónde apunto',projects_kicker:'Portfolio',projects_heading:'Mis proyectos',projects_sub:'Explorá proyectos de análisis, visualización y aplicaciones digitales orientadas a Recursos Humanos.',tab_excel:'Excel',tab_powerbi:'Power BI',tab_hrtech:'HR Tech',contact_kicker:'Contacto',contact_heading:'Información de contacto',contact_email:'garcia.melisa.98@gmail.com',contact_location:'Rosario, Santa Fe, Argentina',tag_people:'People Analytics',tag_excel:'Excel',tag_powerbi:'Power BI',tag_hrtech:'HR Tech',tag_ia:'IA aplicada',footer_text:'Melisa García · Portfolio de People Analytics · RRHH · HR Tech'};
-let textState=JSON.parse(localStorage.getItem('paPortfolioTextV2')||'null')||TEXT_DEFAULTS;
-let state=JSON.parse(localStorage.getItem('paPortfolioV2')||'null')||DEFAULT;
-state.projects=Array.isArray(state.projects)?state.projects:[];state.projects=state.projects.filter(p=>!['1','2','3'].includes(String(p.id)));
-// Agrega Faro también a quienes ya habían guardado el portfolio en este navegador.
-const faroProject=DEFAULT.projects.find(p=>String(p.id)==='faro');const savedFaro=state.projects.find(p=>String(p.id)==='faro');if(savedFaro)Object.assign(savedFaro,{desc:faroProject.desc,story:faroProject.story,image:faroProject.image});else state.projects.push(faroProject);
-let currentCat='HR Tech';let activeProjectId=null;
-function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function safeUrl(s){try{const u=new URL(s);return ['http:','https:','data:','blob:'].includes(u.protocol)?u.href:'#'}catch{return '#'}}
-function isWebUrl(s){try{const u=new URL(s);return ['http:','https:'].includes(u.protocol)}catch{return false}}
-const DB_NAME='melisaPortfolioFiles';const DB_VERSION=1;const STORE='files';
-function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=()=>req.result.createObjectStore(STORE,{keyPath:'id'});req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)}
-)}
-async function saveBlob(file){const id='blob_'+Date.now()+'_'+Math.random().toString(36).slice(2);const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put({id,name:file.name,type:file.type||'application/octet-stream',blob:file});tx.oncomplete=()=>resolve(id);tx.onerror=()=>reject(tx.error)})}
-async function getBlob(id){if(!id)return null;const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readonly');const req=tx.objectStore(STORE).get(id);req.onsuccess=()=>resolve(req.result||null);req.onerror=()=>reject(req.error)})}
-async function deleteBlob(id){if(!id)return;const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).delete(id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}
-function persist(){localStorage.setItem('paPortfolioV2',JSON.stringify(state));localStorage.setItem('paPortfolioTextV2',JSON.stringify(textState));render()}
-function applyTextState(){Object.keys(TEXT_DEFAULTS).forEach(k=>{const el=document.getElementById('t_'+k);if(el)el.textContent=textState[k]??TEXT_DEFAULTS[k]});document.getElementById('t_hero_text').textContent=state.profile.hero;document.getElementById('t_about_title').textContent=state.profile.aboutTitle;document.getElementById('t_about_text').textContent=state.profile.about;document.getElementById('t_goal_text').textContent=state.profile.goal;const mail=document.getElementById('contactEmailLink');if(mail)mail.href='mailto:'+textState.contact_email;const loc=document.getElementById('contactLocationLink');if(loc)loc.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(textState.contact_location)}
-async function getProjectPreviewUrl(p){if(p.image)return safeUrl(p.image);const rec=await getBlob(p.imageBlobId);return rec?URL.createObjectURL(rec.blob):''}
-async function getProjectFileUrl(p){if(p.file)return safeUrl(p.file);const rec=await getBlob(p.fileBlobId);return rec?URL.createObjectURL(rec.blob):''}
-async function render(){applyTextState();const img=document.getElementById('profileImage'),ph=document.getElementById('photoPlaceholder');if(state.profile.image){img.src=state.profile.image;img.style.display='block';ph.style.display='none'}else{img.style.display='none';ph.style.display='block'}
- const list=document.getElementById('projectList');list.innerHTML='';const ps=state.projects.filter(p=>p.cat===currentCat);if(!ps.length){list.innerHTML='<div class="empty">Todavía no hay proyectos en esta categoría.</div>'}
- ps.forEach(async p=>{const el=document.createElement('article');el.className='project';el.dataset.id=p.id;let thumb='';if(p.image){thumb=`<img src="${esc(safeUrl(p.image))}" alt="Vista previa de ${esc(p.name)}">`}else if(p.imageBlobId){const u=await getProjectPreviewUrl(p);if(u)thumb=`<img src="${esc(u)}" alt="Vista previa de ${esc(p.name)}">`}el.innerHTML=`<div class="project-preview-thumb"><div class="preview-badge">VISTA PREVIA</div>${thumb||'<div class="preview-placeholder">Sin imagen de vista previa disponible</div>'}</div><div class="type">${esc(p.cat)}</div><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p><div class="project-actions">${p.cat==='HR Tech'&&p.web?'<span class="btn small">Abrir proyecto ↗</span>':'<span class="btn small">Ver vista previa</span>'}</div>`;el.addEventListener('click',()=>{if(p.cat==='HR Tech'){if(isWebUrl(p.web))window.open(p.web,'_blank','noopener');else openProjectModal(p.id)}else openProjectModal(p.id)});list.appendChild(el)});}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');currentCat=b.dataset.cat;render()});
-async function openProjectModal(id){const p=state.projects.find(x=>x.id===id);if(!p)return;activeProjectId=id;document.getElementById('projectModalType').textContent=(p.cat||'Proyecto').toUpperCase();document.getElementById('projectModalTitle').textContent=p.name;document.getElementById('projectModalDesc').textContent=p.desc||'';document.getElementById('projectModalCat').textContent=p.cat;document.getElementById('projectModalStory').textContent=p.story||'Todavía no hay texto ampliado para este proyecto.';const im=document.getElementById('projectModalImage'),ph=document.getElementById('projectModalPlaceholder');im.style.display='none';ph.style.display='grid';const u=await getProjectPreviewUrl(p);if(u){im.src=u;im.style.display='block';ph.style.display='none'}const d=document.getElementById('projectDownload');d.classList.add('hidden');d.removeAttribute('href');const fileUrl=await getProjectFileUrl(p);if(fileUrl){d.href=fileUrl;d.download='';d.classList.remove('hidden');}document.getElementById('faroModalOpen').classList.toggle('hidden',String(p.id)!=='faro');document.getElementById('projectModal').classList.remove('hidden')}
-function closeProjectModal(){document.getElementById('projectModal').classList.add('hidden');activeProjectId=null}
-window.addEventListener('keydown',e=>{if(e.key==='Escape')closeProjectModal()});
-document.getElementById('projectModal').addEventListener('click',e=>{if(e.target.id==='projectModal')closeProjectModal()});
-// Para conectar n8n: pegá aquí la Production URL de un Webhook que reciba
-// {sessionId, message} y responda JSON con {reply: "..."}. No pongas API keys aquí.
-const FARO_N8N_WEBHOOK_URL='';
-const faroChat=document.getElementById('faroChat'),faroMessages=document.getElementById('faroMessages'),faroInput=document.getElementById('faroInput'),faroSend=document.getElementById('faroSend');
-document.getElementById('faroChatLogo').src=faroLogoData;
-let faroSessionId=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():'faro-'+Date.now()+'-'+Math.random().toString(36).slice(2);
-const faroDemoWelcome='¡Hola! Soy Faro. Voy a hacerte una entrevista inicial para un puesto de atención al cliente y conocer tu experiencia y disponibilidad. ¿Te gustaría continuar? Respondé sí o no.';
-let faroStarted=false,faroDemoStep='consent',faroDemoEnded=false,faroSummaryCorrections=[];
-const faroAnswers={name:'',email:'',experience:'',tasks:'No mencionado',availability:'',transport:'',travel:'No mencionado',bus:'No aplica / No mencionado'};
-function faroNorm(s){return String(s||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
-function faroSummary(){return `Este es el resumen de lo que me compartiste:\n\n- Nombre: ${faroAnswers.name||'No mencionado'}\n- Correo electrónico: ${faroAnswers.email||'No proporcionado'}\n- Experiencia en atención al cliente: ${faroAnswers.experience||'No mencionado'}\n- Tareas realizadas: ${faroAnswers.tasks}\n- Disponibilidad para trabajar de lunes a sábados, de 9:00 a 18:00: ${faroAnswers.availability||'No mencionado'}\n- Medio de transporte previsto: ${faroAnswers.transport||'No mencionado'}\n- Tiempo estimado de viaje hasta Av. Pellegrini 1234, Rosario: ${faroAnswers.travel}\n- Líneas de colectivo: ${faroAnswers.bus}${faroSummaryCorrections.length?'\n- Aclaraciones solicitadas: '+faroSummaryCorrections.join('; '):''}\n\n¿Estás de acuerdo con este resumen? Podés responder sí, no o decirme qué querés corregir o agregar.`}
-function faroDemoReply(message){
-  const m=faroNorm(message);
-  if(faroDemoStep==='consent'){
-    if(/^no\b/.test(m)||m.startsWith('prefiero no')){faroDemoEnded=true;return 'Entendido. Gracias por tu tiempo. La demostración termina aquí.'}
-    if(!/^si\b/.test(m))return '¿Querés continuar con esta entrevista de demostración? Respondé sí o no.';
-    faroDemoStep='name';return 'Gracias. ¿Cuál es tu nombre?'
-  }
-  if(faroDemoStep==='name'){faroAnswers.name=message;faroDemoStep='email';return '¿Cuál es tu email? Escribí tu dirección real para comprobar que el flujo de seguimiento puede enviarte un mensaje. Si n8n todavía no está conectado, esta demo no podrá enviarlo.'}
-  if(faroDemoStep==='email'){
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(message))return 'Ese email parece incompleto. Revisalo y escribí una dirección válida.';
-    faroAnswers.email=message;faroDemoStep='experience';return '¿Trabajaste antes en atención al cliente? Podés responder sí o no.'
-  }
-  if(faroDemoStep==='experience'){
-    faroAnswers.experience=/^si\b/.test(m)?'Sí':/^no\b/.test(m)?'No':message;
-    if(/^si\b/.test(m)){faroDemoStep='tasks';return '¿Qué tareas realizabas concretamente? Por ejemplo, atención presencial o telefónica, consultas, reclamos, ventas, seguimiento de pedidos o uso de sistemas.'}
-    faroDemoStep='availability';return '¿Tenés disponibilidad para trabajar de lunes a sábados, de 9:00 a 18:00?'
-  }
-  if(faroDemoStep==='tasks'){faroAnswers.tasks=message;faroDemoStep='availability';return '¿Tenés disponibilidad para trabajar de lunes a sábados, de 9:00 a 18:00?'}
-  if(faroDemoStep==='availability'){faroAnswers.availability=message;faroDemoStep='transport';return 'El lugar de trabajo está en Av. Pellegrini 1234, Rosario. ¿Cómo te trasladarías hasta allí: con movilidad propia, en transporte público o de otra manera?'}
-  if(faroDemoStep==='transport'){
-    faroAnswers.transport=message;
-    if(/public|colect|bus|transporte/.test(m)){faroDemoStep='travel';return '¿Cuánto estimás que tardarías en llegar? (La pregunta sobre las líneas de colectivo va después.)'}
-    if(/amb|las dos|ambas/.test(m)){faroDemoStep='travel';return 'Si usarías ambas opciones, ¿cuánto estimás que tardarías con cada una?'}
-    faroDemoStep='travel';return '¿Cuánto estimás que tardarías en llegar desde tu zona? No compartas tu domicilio exacto.'
-  }
-  if(faroDemoStep==='travel'){
-    faroAnswers.travel=message;
-    if(/public|colect|bus|transporte|amb|las dos/.test(faroNorm(faroAnswers.transport))){faroDemoStep='bus';return '¿Qué líneas de colectivo tomarías? Si usarías más de una opción, indicá las líneas para el trayecto en transporte público.'}
-    faroDemoStep='summary';return faroSummary()
-  }
-  if(faroDemoStep==='bus'){faroAnswers.bus=message;faroDemoStep='summary';return faroSummary()}
-  if(faroDemoStep==='summary'){
-    if(/^si\b/.test(m)){faroDemoEnded=true;return '¡Gracias por tu tiempo y por participar de esta entrevista! Te pedimos que estés atento/a a tu casilla de correo electrónico; allí recibirás una actualización sobre tu proceso.'}
-    faroDemoStep='correction';return '¿Qué dato querés corregir o agregar? En esta demo, describí el campo y el cambio (por ejemplo: disponibilidad, no).'
-  }
-  if(faroDemoStep==='correction'){faroSummaryCorrections.push(message);faroDemoStep='summary';return faroSummary()}
-  return 'Gracias por participar de la demostración.'
+
+
+/* =========================================================
+   ESTADO
+========================================================= */
+
+let currentCat='HR Tech';
+
+let projects=[
+  faroProject
+];
+
+
+/* =========================================================
+   UTILIDADES
+========================================================= */
+
+function esc(s){
+
+return String(s ?? '')
+.replace(/[&<>"']/g,m=>({
+
+'&':'&amp;',
+'<':'&lt;',
+'>':'&gt;',
+'"':'&quot;',
+"'":'&#39;'
+
+}[m]));
+
 }
-function faroAddMessage(text,role){const b=document.createElement('div');b.className='faro-bubble '+(role==='user'?'user':'bot');b.textContent=text;faroMessages.appendChild(b);faroMessages.scrollTop=faroMessages.scrollHeight}
-function faroOpenChat(){faroChat.classList.add('open');document.getElementById('faroModalOpen').setAttribute('aria-expanded','true');if(!faroStarted){faroStarted=true;faroAddMessage(faroDemoWelcome,'bot')}faroInput.focus()}
-function faroRestartConversation(){faroStarted=true;faroDemoStep='consent';faroDemoEnded=false;faroSummaryCorrections=[];Object.assign(faroAnswers,{name:'',email:'',experience:'',tasks:'No mencionado',availability:'',transport:'',travel:'No mencionado',bus:'No aplica / No mencionado'});faroSessionId=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():'faro-'+Date.now()+'-'+Math.random().toString(36).slice(2);faroMessages.replaceChildren();faroChat.classList.add('open');document.getElementById('faroModalOpen').setAttribute('aria-expanded','true');faroAddMessage(faroDemoWelcome,'bot');faroInput.value='';faroInput.focus()}
-document.getElementById('faroModalOpen').addEventListener('click',faroOpenChat);
-document.getElementById('faroRestart').addEventListener('click',faroRestartConversation);
-document.getElementById('faroClose').addEventListener('click',()=>{faroChat.classList.remove('open');document.getElementById('faroModalOpen').setAttribute('aria-expanded','false')});
-document.getElementById('faroForm').addEventListener('submit',async e=>{
-  e.preventDefault();const message=faroInput.value.trim();if(!message||faroSend.disabled)return;
-  faroAddMessage(message,'user');faroInput.value='';faroSend.disabled=true;
-  try{
-    if(FARO_N8N_WEBHOOK_URL){
-      const res=await fetch(FARO_N8N_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:faroSessionId,message,channel:'portfolio-chat-demo'})});
-      if(!res.ok)throw new Error('Webhook error');const data=await res.json();
-      faroAddMessage(data.reply||data.output||'No recibí una respuesta del flujo. Probá nuevamente.','bot');
-    }else if(!faroDemoEnded){faroAddMessage(faroDemoReply(message),'bot')}
-    else{faroAddMessage('La demo terminó. Cerrá la ventana y volvé a abrirla para iniciar otra conversación.','bot')}
-  }catch(err){faroAddMessage('No pude conectar con n8n. El flujo puede estar inactivo o no aceptar solicitudes desde esta página.','bot')}
-  finally{faroSend.disabled=false;faroInput.focus()}
+
+
+/* =========================================================
+   RENDER PROYECTOS
+========================================================= */
+
+function renderProjects(){
+
+const list=document.getElementById('projectList');
+
+list.innerHTML='';
+
+const filtered=
+projects.filter(p=>p.cat===currentCat);
+
+if(!filtered.length){
+
+list.innerHTML=
+'<div class="empty">Todavía no hay proyectos en esta categoría.</div>';
+
+return;
+
+}
+
+filtered.forEach(p=>{
+
+const el=document.createElement('article');
+
+el.className='project';
+
+el.innerHTML=`
+
+<div class="project-preview-thumb">
+
+<div class="preview-badge">
+VISTA PREVIA
+</div>
+
+<img
+src="${esc(p.image)}"
+alt="Logo de ${esc(p.name)}">
+
+</div>
+
+<div class="type">
+${esc(p.cat)}
+</div>
+
+<h3>
+${esc(p.name)}
+</h3>
+
+<p>
+${esc(p.desc)}
+</p>
+
+<div class="project-actions">
+
+<span class="btn small">
+Ver proyecto
+</span>
+
+</div>
+
+`;
+
+el.addEventListener(
+'click',
+()=>openProjectModal(p.id)
+);
+
+list.appendChild(el);
+
 });
-window.addEventListener('pageshow',()=>{faroStarted=false;faroDemoStep='consent';faroDemoEnded=false;faroSummaryCorrections=[];Object.assign(faroAnswers,{name:'',email:'',experience:'',tasks:'No mencionado',availability:'',transport:'',travel:'No mencionado',bus:'No aplica / No mencionado'});faroMessages.replaceChildren();faroChat.classList.remove('open');document.getElementById('faroModalOpen').setAttribute('aria-expanded','false');faroSessionId=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():'faro-'+Date.now()+'-'+Math.random().toString(36).slice(2)});
-render();
+
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+document
+.querySelectorAll('.tab')
+.forEach(button=>{
+
+button.addEventListener('click',()=>{
+
+document
+.querySelectorAll('.tab')
+.forEach(x=>x.classList.remove('active'));
+
+button.classList.add('active');
+
+currentCat=button.dataset.cat;
+
+renderProjects();
+
+});
+
+});
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+function openProjectModal(id){
+
+const p=projects.find(x=>x.id===id);
+
+if(!p)return;
+
+document
+.getElementById('projectModalType')
+.textContent=p.cat.toUpperCase();
+
+document
+.getElementById('projectModalTitle')
+.textContent=p.name;
+
+document
+.getElementById('projectModalDesc')
+.textContent=p.desc;
+
+document
+.getElementById('projectModalCat')
+.textContent=p.cat;
+
+document
+.getElementById('projectModalStory')
+.textContent=p.story;
+
+const image=
+document.getElementById('projectModalImage');
+
+const placeholder=
+document.getElementById('projectModalPlaceholder');
+
+image.src=p.image;
+
+image.style.display='block';
+
+placeholder.style.display='none';
+
+document
+.getElementById('projectModal')
+.classList.remove('hidden');
+
+}
+
+function closeProjectModal(){
+
+document
+.getElementById('projectModal')
+.classList.add('hidden');
+
+}
+
+window.addEventListener(
+'keydown',
+e=>{
+
+if(e.key==='Escape'){
+closeProjectModal();
+}
+
+});
+
+document
+.getElementById('projectModal')
+.addEventListener(
+'click',
+e=>{
+
+if(e.target.id==='projectModal'){
+closeProjectModal();
+}
+
+});
+
+
+/* =========================================================
+   FARO
+========================================================= */
+
+const faroChat=
+document.getElementById('faroChat');
+
+const faroMessages=
+document.getElementById('faroMessages');
+
+const faroInput=
+document.getElementById('faroInput');
+
+const faroSend=
+document.getElementById('faroSend');
+
+document
+.getElementById('faroChatLogo')
+.src=faroLogoData;
+
+
+/* =========================================================
+   WEBHOOK N8N
+========================================================= */
+
+/*
+  IMPORTANTE:
+
+  Acá solamente va la URL pública del Webhook.
+
+  NO pongas acá:
+  - OpenAI API Key
+  - credenciales de n8n
+  - contraseñas
+  - tokens privados
+
+  Esas credenciales deben quedar configuradas
+  dentro de n8n.
+*/
+
+const FARO_N8N_WEBHOOK_URL='';
+
+
+/* =========================================================
+   SESIÓN
+========================================================= */
+
+let faroSessionId=
+(window.crypto && crypto.randomUUID)
+?
+crypto.randomUUID()
+:
+'faro-'+Date.now()+'-'+Math.random()
+.toString(36)
+.slice(2);
+
+
+/* =========================================================
+   DEMO LOCAL
+========================================================= */
+
+let faroStarted=false;
+
+let faroDemoEnded=false;
+
+let faroStep='consent';
+
+const faroAnswers={
+
+name:'',
+email:'',
+experience:'',
+tasks:'',
+availability:'',
+transport:'',
+travel:'',
+bus:''
+
+};
+
+
+/* =========================================================
+   MENSAJES
+========================================================= */
+
+function faroAddMessage(text,role){
+
+const bubble=
+document.createElement('div');
+
+bubble.className=
+'faro-bubble '+
+(role==='user'?'user':'bot');
+
+bubble.textContent=text;
+
+faroMessages.appendChild(bubble);
+
+faroMessages.scrollTop=
+faroMessages.scrollHeight;
+
+}
+
+
+/* =========================================================
+   NORMALIZAR TEXTO
+========================================================= */
+
+function faroNorm(text){
+
+return String(text||'')
+.trim()
+.toLowerCase()
+.normalize('NFD')
+.replace(/[\u0300-\u036f]/g,'');
+
+}
+
+
+/* =========================================================
+   RESPUESTAS DEMO
+========================================================= */
+
+function faroDemoReply(message){
+
+const m=faroNorm(message);
+
+if(faroStep==='consent'){
+
+if(m.startsWith('no')){
+
+faroDemoEnded=true;
+
+return 'Entendido. Gracias por tu tiempo. La demostración termina aquí.';
+
+}
+
+if(!m.startsWith('si')){
+
+return '¿Querés continuar con esta entrevista de demostración? Respondé sí o no.';
+
+}
+
+faroStep='name';
+
+return 'Gracias. ¿Cuál es tu nombre?';
+
+}
+
+
+if(faroStep==='name'){
+
+faroAnswers.name=message;
+
+faroStep='email';
+
+return '¿Cuál es tu email?';
+
+}
+
+
+if(faroStep==='email'){
+
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(message)){
+
+return 'Ese email parece incompleto. Revisalo y escribí una dirección válida.';
+
+}
+
+faroAnswers.email=message;
+
+faroStep='experience';
+
+return '¿Trabajaste antes en atención al cliente? Podés responder sí o no.';
+
+}
+
+
+if(faroStep==='experience'){
+
+faroAnswers.experience=message;
+
+if(m.startsWith('si')){
+
+faroStep='tasks';
+
+return '¿Qué tareas realizabas concretamente?';
+
+}
+
+faroStep='availability';
+
+return '¿Tenés disponibilidad para trabajar de lunes a sábados, de 9:00 a 18:00?';
+
+}
+
+
+if(faroStep==='tasks'){
+
+faroAnswers.tasks=message;
+
+faroStep='availability';
+
+return '¿Tenés disponibilidad para trabajar de lunes a sábados, de 9:00 a 18:00?';
+
+}
+
+
+if(faroStep==='availability'){
+
+faroAnswers.availability=message;
+
+faroStep='transport';
+
+return '¿Cómo te trasladarías hasta el lugar de trabajo: movilidad propia, transporte público u otra opción?';
+
+}
+
+
+if(faroStep==='transport'){
+
+faroAnswers.transport=message;
+
+faroStep='travel';
+
+return '¿Cuánto estimás que tardarías en llegar? No compartas tu domicilio exacto.';
+
+}
+
+
+if(faroStep==='travel'){
+
+faroAnswers.travel=message;
+
+faroStep='summary';
+
+return `Este es el resumen de lo que me compartiste:
+
+Nombre: ${faroAnswers.name}
+
+Email: ${faroAnswers.email}
+
+Experiencia: ${faroAnswers.experience}
+
+Tareas: ${faroAnswers.tasks || 'No mencionado'}
+
+Disponibilidad: ${faroAnswers.availability}
+
+Transporte: ${faroAnswers.transport}
+
+Tiempo estimado de viaje: ${faroAnswers.travel}
+
+¿Estás de acuerdo con este resumen? Respondé sí o no.`;
+
+}
+
+
+if(faroStep==='summary'){
+
+if(m.startsWith('si')){
+
+faroDemoEnded=true;
+
+return 'Gracias por participar. En un flujo conectado a n8n, este punto podría disparar el registro de la entrevista y el envío automático de un correo de seguimiento.';
+
+}
+
+return 'Podés indicarme qué dato querés corregir o agregar.';
+
+}
+
+
+return 'Gracias por participar de la demostración.';
+
+}
+
+
+/* =========================================================
+   ABRIR FARO
+========================================================= */
+
+function faroOpenChat(){
+
+faroChat.classList.add('open');
+
+if(!faroStarted){
+
+faroStarted=true;
+
+faroAddMessage(
+'¡Hola! Soy Faro. Voy a hacerte una entrevista inicial para un puesto de atención al cliente. ¿Te gustaría continuar? Respondé sí o no.',
+'bot'
+);
+
+}
+
+faroInput.focus();
+
+}
+
+
+/* =========================================================
+   REINICIAR
+========================================================= */
+
+function faroRestartConversation(){
+
+faroStarted=true;
+
+faroDemoEnded=false;
+
+faroStep='consent';
+
+Object.assign(
+faroAnswers,
+{
+name:'',
+email:'',
+experience:'',
+tasks:'',
+availability:'',
+transport:'',
+travel:'',
+bus:''
+}
+);
+
+faroSessionId=
+(window.crypto && crypto.randomUUID)
+?
+crypto.randomUUID()
+:
+'faro-'+Date.now();
+
+faroMessages.replaceChildren();
+
+faroChat.classList.add('open');
+
+faroAddMessage(
+'¡Hola! Soy Faro. Voy a hacerte una entrevista inicial para un puesto de atención al cliente. ¿Te gustaría continuar? Respondé sí o no.',
+'bot'
+);
+
+faroInput.value='';
+
+faroInput.focus();
+
+}
+
+
+/* =========================================================
+   EVENTOS
+========================================================= */
+
+document
+.getElementById('faroModalOpen')
+.addEventListener(
+'click',
+faroOpenChat
+);
+
+document
+.getElementById('faroRestart')
+.addEventListener(
+'click',
+faroRestartConversation
+);
+
+document
+.getElementById('faroClose')
+.addEventListener(
+'click',
+()=>{
+
+faroChat.classList.remove('open');
+
+}
+);
+
+
+/* =========================================================
+   ENVÍO DEL CHAT
+========================================================= */
+
+document
+.getElementById('faroForm')
+.addEventListener(
+'submit',
+async e=>{
+
+e.preventDefault();
+
+const message=
+faroInput.value.trim();
+
+if(
+!message ||
+faroSend.disabled
+)return;
+
+faroAddMessage(
+message,
+'user'
+);
+
+faroInput.value='';
+
+faroSend.disabled=true;
+
+try{
+
+/*
+  SI HAY WEBHOOK:
+
+  El navegador manda únicamente
+  información de la conversación.
+
+  La API key de OpenAI queda
+  dentro de n8n.
+*/
+
+if(FARO_N8N_WEBHOOK_URL){
+
+const response=
+await fetch(
+FARO_N8N_WEBHOOK_URL,
+{
+
+method:'POST',
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:JSON.stringify({
+
+sessionId:faroSessionId,
+
+message:message,
+
+channel:'portfolio-chat-demo',
+
+project:'faro-rrhh'
+
+})
+
+}
+);
+
+if(!response.ok){
+
+throw new Error(
+'Webhook error'
+);
+
+}
+
+const data=
+await response.json();
+
+faroAddMessage(
+data.reply ||
+data.output ||
+'No recibí una respuesta del flujo.',
+'bot'
+);
+
+}
+
+/*
+  SI NO HAY WEBHOOK:
+
+  Se ejecuta la demostración
+  directamente en el navegador.
+*/
+
+else if(!faroDemoEnded){
+
+faroAddMessage(
+faroDemoReply(message),
+'bot'
+);
+
+}
+
+else{
+
+faroAddMessage(
+'La demostración terminó. Reiniciá la conversación para comenzar nuevamente.',
+'bot'
+);
+
+}
+
+}
+
+catch(error){
+
+console.error(error);
+
+faroAddMessage(
+'No pude conectar con n8n. Verificá que el Webhook esté activo y que acepte solicitudes desde esta página.',
+'bot'
+);
+
+}
+
+finally{
+
+faroSend.disabled=false;
+
+faroInput.focus();
+
+}
+
+});
+
+
+/* =========================================================
+   INICIALIZAR
+========================================================= */
+
+renderProjects();
+
 </script>
+
 </body>
 </html>
