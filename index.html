@@ -1171,7 +1171,7 @@ Faro RRHH
 
 <p class="modal-sub" id="projectModalDesc"></p>
 <a class="faro-workflow-link hidden" id="faroWorkflowLink" href="https://melisaailen.app.n8n.cloud/workflow/5zOtKfp1Boo3H635?projectId=7Ym4MA0BoTEAOf8v" target="_blank" rel="noopener">Ver el flujo de trabajo en n8n ↗</a>
-<a class="faro-workflow-link hidden" id="nexolabDemoLink" href="./nexolab-preview.html" target="_blank" rel="noopener">Explorar la demo de NexoLab ↗</a>
+<a class="faro-workflow-link hidden" id="nexolabDemoLink" href="https://nexolab2026.pages.dev/#inicio" target="_blank" rel="noopener noreferrer">Explorar la demo de NexoLab ↗</a>
 
 <div class="modal-grid">
 
@@ -1408,11 +1408,11 @@ const nexolabStory=`**🧩 ¿Qué es NexoLab: ERP, CRM o HR Tech?** Un ERP conec
 
 **🤝 ¿Es posible implementarlo en una organización real?** Sí. Primero, RR. HH. y las personas que usarían la herramienta definen qué problema quieren resolver. Luego se elige un proceso prioritario, se adapta el prototipo a sus pasos y reglas, y un equipo técnico lo convierte en una aplicación segura y conectada con los sistemas de la organización. Se prueba con un grupo pequeño, se ajusta con lo aprendido y después se amplía. La demo ayuda a visualizar la idea, pero no se instala directamente como sistema final.
 
-**🔒 ¿Se puede proteger la información?** Sí. En esta demo, los datos de prueba se guardan principalmente en el navegador, así que no conviene cargar información personal real. Para una versión de uso real, Cloudflare Access puede verificar quién tiene permiso para entrar; Pages Functions puede procesar las acciones y revisar qué puede hacer cada usuario; y una base D1 puede guardar los datos cifrados, tanto cuando están almacenados como cuando viajan entre servicios. También se configuran permisos por rol y copias de seguridad. Estas medidas requieren diseño, configuración y pruebas: publicar la página en Cloudflare Pages, por sí solo, no las activa.
+**🔒 ¿Se puede proteger la información?** Sí. En esta demo, los datos de prueba se guardan principalmente en el navegador, así que no conviene cargar información personal real. Para una versión de uso real habría que incorporar inicio de sesión, permisos por rol, un backend y almacenamiento centralizado. Cloudflare Access, Pages Functions y D1 son opciones posibles si se implementa esa arquitectura, pero todavía no están configuradas: la publicación actual en GitHub Pages no las incluye.
 
-**🛠️ Cómo está hecha:** la interfaz está construida con HTML, CSS y JavaScript. LocalStorage conserva datos de prueba en el navegador; PDF.js, pdf-lib, SheetJS, JSZip y Tesseract.js dan soporte a la lectura, conversión y gestión de archivos y planillas. Google Apps Script y Gmail conectan ejemplos de notificaciones. Cloudflare Pages aloja y sirve la interfaz estática desde una URL pública; la sincronización entre usuarios y los datos centralizados requieren servicios de backend.`;
+**🛠️ Cómo está hecha:** la interfaz está construida con HTML, CSS y JavaScript. GitHub Pages publica la versión estática desde el repositorio; LocalStorage conserva datos de prueba en el navegador. PDF.js, pdf-lib, SheetJS, JSZip y Tesseract.js dan soporte a la lectura, conversión y gestión de archivos y planillas. Google Apps Script y Gmail conectan ejemplos de notificaciones. Como no tiene un backend centralizado, los datos de la demo no se sincronizan entre usuarios.`;
 
-const nexolabProject={id:'nexolab',cat:'HR Tech',name:'NexoLab',desc:nexolabDescription,story:nexolabStory,image:nexolabLogoData,technologies:'HTML · CSS · JavaScript · LocalStorage · PDF.js · pdf-lib · SheetJS · JSZip · Tesseract.js · Google Apps Script · Cloudflare Pages'};
+const nexolabProject={id:'nexolab',cat:'HR Tech',name:'NexoLab',desc:nexolabDescription,story:nexolabStory,image:nexolabLogoData,technologies:'HTML · CSS · JavaScript · LocalStorage · PDF.js · pdf-lib · SheetJS · JSZip · Tesseract.js · Google Apps Script · GitHub Pages'};
 /* =========================================================
    ESTADO
 ========================================================= */
