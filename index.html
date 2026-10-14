@@ -645,6 +645,7 @@ h2{
 .story ol{margin:0 0 16px;padding-left:22px}
 .story li{padding-left:3px;margin-bottom:5px}
 .story strong,.modal-sub strong{color:var(--ink)}
+.story.nexolab-story > p.nexolab-section-heading > strong{font-size:calc(1em + 1pt)}
 
 .hidden{
   display:none!important;
@@ -1426,32 +1427,24 @@ const faroProject = {
 
 
 const nexolabLogoData='data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="620" height="180" viewBox="-36 0 620 180"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087e83"/><stop offset="1" stop-color="#174d61"/></linearGradient></defs><rect x="18" y="18" width="144" height="144" rx="44" fill="url(#g)"/><path d="M50 126V70h14l42 35V70h14v56h-14L64 91v35H50Z" fill="white"/><circle cx="133" cy="49" r="10" fill="#9de3da"/><text x="190" y="123" fill="#112e40" font-family="Arial,sans-serif" font-size="82" font-weight="700">NexoLab</text></svg>');
-const nexolabDescription='NexoLab es una empresa ficticia que simula ofrecer soluciones digitales para Recursos Humanos. Esta demo muestra cómo sus herramientas podrían adaptarse a una organización real: es viable implementarla, con la adaptación de procesos, seguridad e infraestructura necesarias.';
-const nexolabStory=`**🧩 ¿Qué es NexoLab: ERP, CRM o HR Tech?** Un ERP conecta procesos de distintas áreas y un CRM organiza vínculos con clientes. Por eso, NexoLab no es un ERP ni un CRM completo: toma del ERP la idea de integrar procesos, pero la enfoca en las personas. Es HR Tech (Human Resources Technology), es decir, tecnología aplicada a Recursos Humanos.
+const nexolabDescription='NexoLab es una empresa ficticia que simula ofrecer soluciones digitales para Recursos Humanos. Esta demo muestra cómo sus herramientas podrían adaptarse a una organización real; para implementarla habría que adecuar los procesos, la seguridad y la infraestructura.';
+const nexolabStory=`**🧩 ¿Qué es NexoLab: ERP, CRM o HR Tech?** NexoLab es una empresa ficticia y esta página es una demostración. Un ERP integra procesos de distintas áreas y un CRM organiza la relación con clientes. NexoLab toma la idea de integrar procesos, pero se concentra en la gestión de personas. Por eso se presenta como HR Tech (Human Resources Technology): tecnología aplicada a Recursos Humanos. No es un ERP ni un CRM completo.
 
-**✨ Funciones destacadas —hay más para explorar**
-1. Seguimiento de candidatos, entrevistas, valoraciones y etapas de selección.
-2. Guías para entrevistas y preparación de ofertas laborales.
-3. Directorio del equipo con búsqueda, filtros e imágenes editables.
-4. Evaluación de desempeño y seguimiento de objetivos.
-5. Calendario de reuniones, eventos, licencias, vacaciones y ausencias.
-6. Modelo de liquidación de sueldos y descarga de comprobantes PDF.
-7. Formularios y plantillas para documentación del personal.
-8. Panel de la empresa y sus áreas.
-9. Herramientas para convertir, unir, comprimir y marcar archivos.
-10. Avisos por correo de demostración mediante Google Apps Script.
+**✨ Funciones destacadas**
+1. **Atracción y selección:** registra candidatos, entrevistas, valoraciones y etapas; también permite comparar perfiles con los requisitos del puesto.
+2. **Gestión de personas:** consulta y organiza registros de empleados y candidatos con búsqueda y filtros.
+3. **Desempeño y objetivos:** prepara evaluaciones con objetivos, competencias y escalas, y permite organizar su seguimiento.
+4. **Gestión de fechas:** centraliza reuniones, capacitaciones, evaluaciones de desempeño, fechas importantes, licencias, vacaciones y ausencias.
+5. **Cálculos laborales:** calcula antigüedad, estima vacaciones y ausentismo, y permite preparar una estimación de haberes. Los resultados requieren revisión según cada situación y normativa aplicable.
+6. **Protocolos:** ofrece guías para onboarding, cambios de rol, desempeño, ausencias, conflictos y desvinculaciones.
+7. **Plantillas y modelos:** incluye fichas, solicitudes, comunicaciones, encuestas y un constructor de modelos descargables.
+8. **Análisis de planillas:** permite revisar datos de Excel, consultar medidas y explorar gráficos para apoyar el análisis.
+9. **Herramientas para archivos:** reúne funciones para trabajar con PDF, imágenes y planillas, como convertir, extraer o combinar contenido.
+10. **Avisos por email:** envía confirmaciones de entrevistas y avisos de eventos a las direcciones agregadas en esos registros.
 
+**🛠️ Cómo está hecha NexoLab:** es una página web estática construida con HTML, CSS y JavaScript, publicada en GitHub Pages. GitHub Pages entrega el archivo al navegador, pero no funciona como servidor de usuarios ni como base de datos. El navegador muestra la interfaz y ejecuta sus funciones; LocalStorage guarda los registros en el dispositivo, y SessionStorage mantiene datos de la sesión. Para emails utiliza Google Apps Script conectado con Gmail; el servicio registra avisos en Google Sheets. Para trabajar con archivos, el código carga PDF.js para leer PDFs, pdf-lib para crear PDFs, SheetJS para planillas Excel, JSZip para empaquetar documentos Word y Tesseract.js para reconocimiento de texto en imágenes. Estas bibliotecas se cargan desde CDNs públicos. Una implementación real necesitaría además autenticación segura, permisos, almacenamiento central, copias de seguridad y controles de seguridad adaptados a la organización.`;
 
-
-
-
-**🔒 ¿Qué significa que los datos se guarden en el navegador?** Significa que cierta información queda almacenada en este dispositivo, dentro del perfil de navegador utilizado, en lugar de guardarse en una base central de la organización. No se sincroniza automáticamente con otros dispositivos. Cualquier persona que tenga acceso a este dispositivo y a ese perfil de navegador podría consultar o modificar esos datos; por eso no cargues información personal o laboral real. Las acciones que usan servicios externos —por ejemplo, formularios de contacto o avisos por email— pueden enviar los datos necesarios a esos servicios.
-
-Para una versión de uso real habría que incorporar inicio de sesión, permisos por rol, un backend y almacenamiento centralizado. Cloudflare Access, Pages Functions y D1 son opciones posibles si se implementa esa arquitectura, pero todavía no están configuradas: la publicación actual en GitHub Pages no las incluye.
-
-**🛠️ Cómo está hecha:** la interfaz está construida con HTML, CSS y JavaScript. GitHub Pages publica la versión estática; PDF.js, pdf-lib, SheetJS, JSZip y Tesseract.js dan soporte a la lectura y gestión de archivos y planillas. Google Apps Script y Gmail conectan ejemplos de notificaciones. La demo no dispone de un backend centralizado.`;
-
-const nexolabProject={id:'nexolab',cat:'HR Tech',name:'NexoLab',desc:nexolabDescription,story:nexolabStory,image:nexolabLogoData,technologies:'HTML · CSS · JavaScript · LocalStorage · PDF.js · pdf-lib · SheetJS · JSZip · Tesseract.js · Google Apps Script · GitHub Pages'};
+const nexolabProject={id:'nexolab',cat:'HR Tech',name:'NexoLab',desc:nexolabDescription,story:nexolabStory,image:nexolabLogoData,technologies:'HTML · CSS · JavaScript · GitHub Pages · LocalStorage · SessionStorage · PDF.js · pdf-lib · SheetJS · JSZip · Tesseract.js · Google Apps Script · Gmail · Google Sheets'};
 /* =========================================================
    ESTADO
 ========================================================= */
@@ -1597,6 +1590,8 @@ document
 const story=document.getElementById('projectModalStory');
 const hasStory=Boolean(p.story && p.story!==p.desc);
 story.innerHTML=hasStory?formatProjectCopy(p.story):'';
+story.classList.toggle('nexolab-story',p.id==='nexolab');
+if(p.id==='nexolab')for(const paragraph of story.children){const heading=paragraph.firstElementChild;if(paragraph.tagName==='P'&&heading?.tagName==='STRONG'&&/^(?:🧩 ¿Qué es NexoLab|✨ Funciones destacadas|🛠️ Cómo está hecha NexoLab)/.test(heading.textContent.trim()))paragraph.classList.add('nexolab-section-heading');}
 story.style.display=hasStory?'':'none';
 const techMeta=document.getElementById('projectModalTechMeta');
 const tech=document.getElementById('projectModalTech');
