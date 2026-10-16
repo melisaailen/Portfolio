@@ -883,6 +883,113 @@ footer{
     height:min(560px,calc(100vh - 88px));
   }
 }
+
+/* ===== REDISEÑO · estilo consultora azul ===== */
+:root{--navy:#14213d;--navy2:#1b2f55;--steel:#5b8aa8;--steel2:#3f6f90}
+body{background:#eef3f7}
+header{position:fixed;left:0;right:0;top:0;background:linear-gradient(180deg,rgba(14,26,48,.82),rgba(14,26,48,.35));border:0;backdrop-filter:blur(6px)}
+.brand{color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}.brand span:not(.mark){color:#9fc3d9;font-weight:500}
+.mark{width:26px;height:26px;background:linear-gradient(135deg,#9fc3d9,#4a6fa5);clip-path:polygon(50% 0,100% 100%,0 100%,38% 62%)}
+nav{display:flex;align-items:center}nav a{color:#e6eef4;margin-left:26px}nav a:hover{color:#fff}
+nav .navbtn{background:var(--steel2);padding:10px 20px;border-radius:6px;color:#fff;font-weight:600}nav .navbtn:hover{background:var(--steel)}
+.linkedin-link{border-radius:6px;width:40px;height:40px}
+.hero{display:block;position:relative;overflow:hidden;min-height:680px;padding:150px 0 190px;gap:0;background:linear-gradient(180deg,#0f1c33 0%,#1d3557 45%,#3a5f86 78%,#6f93b3 100%);color:#fff}
+.hero .sky{position:absolute;left:0;right:0;bottom:0;width:100%;height:68%;opacity:.95}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 30%,rgba(15,28,51,.55),transparent 60%);pointer-events:none}
+.hero-in{position:relative;z-index:2}
+.hero .kicker{color:#a9cbe0}
+.hero h1{color:#fff;font-weight:600;letter-spacing:-.04em;max-width:640px;font-size:clamp(40px,5.6vw,68px);line-height:1.04}
+.hero .lead{color:#dce8f0;max-width:560px;font-size:18px}
+.btn{border-radius:6px;background:var(--steel2)}.btn:hover{background:var(--steel)}
+.btn.ghostd{background:rgba(14,26,48,.55);border:1px solid rgba(255,255,255,.35);color:#fff}.btn.ghostd:hover{background:rgba(255,255,255,.15)}
+.lift{padding:0;margin-top:-100px;z-index:3}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.icard{background:#fbfdfe;text-align:center;display:flex;flex-direction:column;align-items:center;padding:30px 26px 28px;border-radius:6px;box-shadow:0 18px 40px rgba(14,26,48,.22);border:0}
+.icard h3{font-size:20px;margin:14px 0 8px;color:var(--ink)}.icard p{font-size:13.5px;margin:0 0 20px;flex:1}.icard .tags{justify-content:center;margin-bottom:20px;flex:1;align-content:flex-start}
+.icard .btn{min-width:130px}
+.ico{width:44px;height:44px;color:var(--steel2)}.ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ico.s{width:38px;height:38px;margin:0 auto}
+.focus{background:#eef3f7;padding:80px 0 90px}
+.ctitle{text-align:center;font-size:24px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:var(--steel2);margin:0 0 36px}
+.ctitle.w{color:#fff}
+.cols4{display:grid;grid-template-columns:repeat(4,1fr)}
+.col{text-align:center;padding:6px 26px;border-left:1px solid rgba(22,96,136,.15)}.col:first-child{border-left:0}
+.col h4{margin:14px 0 8px;font-size:18px;font-weight:500}.col p{margin:0;color:var(--blue-slate);font-size:13.5px;line-height:1.6}
+.dark{background:linear-gradient(180deg,#1b2f55,#14213d);color:#fff;padding:76px 0 90px}
+.dark .sub.w{color:#cdd9e5;text-align:center;margin:-14px auto 8px}
+.tabs.c{justify-content:center}
+.dark .tab{background:transparent;color:#dce8f0;border:1px solid rgba(255,255,255,.3);border-radius:6px}.dark .tab.active{background:var(--steel2);border-color:var(--steel2);color:#fff}
+.dark .projects::-webkit-scrollbar-track{background:rgba(255,255,255,.08)}.dark .projects::-webkit-scrollbar-thumb{background:rgba(255,255,255,.3)}
+.project{border-radius:4px;border:0;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.project-preview-thumb{border-radius:3px}
+.dark.contact{padding:20px 0 90px;background:#14213d}
+.dark.contact .card{background:#fbfdfe;border-radius:6px}
+footer{background:#0e1a30;color:#9fb3c6;border:0}
+@media(max-width:800px){.trio,.cols4{grid-template-columns:1fr}.col{border-left:0;border-top:1px solid rgba(22,96,136,.15);padding:22px}.col:first-child{border-top:0}.hero{padding:120px 0 170px}.nav nav{display:flex}.nav nav a:not(.navbtn):not(.linkedin-link){display:none}}
+.dark .projects{justify-content:center}
+
+.hero .shapes{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.shapes i{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.16)}
+.shapes .r1{width:760px;height:760px;right:-200px;top:-120px;background:radial-gradient(circle at 35% 35%,rgba(111,147,179,.28),rgba(111,147,179,0) 70%)}
+.shapes .r2{width:520px;height:520px;right:-60px;top:20px}
+.shapes .r3{width:300px;height:300px;right:60px;top:140px;background:rgba(255,255,255,.04)}
+.shapes .dots{position:absolute;left:-20px;bottom:90px;width:260px;height:160px;background-image:radial-gradient(rgba(255,255,255,.22) 1.4px,transparent 1.6px);background-size:20px 20px;opacity:.7}
+.hero-in{display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}
+.hero .photo{width:min(340px,100%);justify-self:end;border:6px solid rgba(255,255,255,.18);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.hero .photo img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .placeholder strong{font-size:56px}
+.trio{grid-template-columns:repeat(2,1fr);max-width:820px;margin:auto}
+.bru-box{margin-top:16px;padding:18px;border:1px solid rgba(22,96,136,.16);border-left:4px solid var(--smart-blue);border-radius:16px;background:linear-gradient(110deg,#f1f8fb,#f7fbfc);color:var(--blue-slate);line-height:1.6}
+.bru-box p{margin:0 0 8px}.bru-box strong{color:var(--ink)}
+.bru-opt{margin-top:14px;padding:14px;background:#fff;border:1px solid rgba(22,96,136,.12);border-radius:14px}
+.bru-opt h4{margin:0 0 6px;color:var(--ink);font-size:15px}.bru-tag{background:var(--pale-sky);color:var(--baltic-blue);font-size:11px;padding:3px 8px;border-radius:99px;margin-left:6px}
+.bru-preview{background:var(--alice-blue);border-radius:10px;padding:10px 12px;font-size:13px;white-space:pre-wrap;margin:8px 0}
+.bru-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px}.bru-row input[type=file]{font-size:13px;max-width:100%}
+.bru-privacy{background:var(--alice-blue);border-radius:10px;padding:10px 14px;font-size:13px}.bru-privacy ul{margin:6px 0 0;padding-left:18px}
+.bru-check{display:flex;gap:10px;align-items:flex-start;margin-top:10px;font-size:13px;color:var(--ink);cursor:pointer}.bru-check input{margin-top:4px;width:18px;height:18px;flex:none}
+.bru-note{font-size:12px;margin-top:6px}.bru-status{margin-top:12px;font-weight:600;color:var(--baltic-blue)}.bru-open{margin-top:8px;display:inline-block}.bru-pv{display:flex;gap:14px;align-items:flex-start}.bru-pv svg{flex:none;border-radius:10px}.bru-pv>div{white-space:pre-wrap}.bru-fname{font-size:13px;color:var(--ink);overflow-wrap:anywhere}.bru-row .btn.ghost{color:var(--navy);border:1px solid #c9d8e3;background:#fff}.bru-row .btn.ghost:hover{background:#e6eef4}.bru-dl{cursor:pointer;text-decoration:none;display:inline-block}.bru-dl[aria-disabled=true]{opacity:.45;pointer-events:none}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+@media(max-width:800px){.hero-in{grid-template-columns:1fr}.hero .photo{justify-self:start;max-width:240px}}
+
+/* ===== proyectos: tarjetas y ventana con el nuevo estilo ===== */
+.project{color:var(--ink);min-height:0;padding:18px 18px 20px}
+.project .type{color:var(--steel2);font-size:11px;letter-spacing:.14em;margin-top:2px}
+.project h3{color:var(--navy);font-size:20px;font-weight:700;margin:6px 0 0;letter-spacing:-.02em}
+.project-preview-thumb{background:linear-gradient(135deg,#eef3f7,#cfdeea);border-radius:4px}
+.project-open-indicator{background:var(--navy);color:#fff;border-radius:4px}
+.project:focus-visible{outline-color:var(--steel)}
+.modal-backdrop{background:rgba(14,26,48,.7)}
+.modal-box{border-radius:10px;padding:30px;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.modal-box:before{content:"";display:block;height:8px;margin:-30px -30px 24px;background:linear-gradient(90deg,#14213d,#3f6f90 55%,#9fc3d9);border-radius:10px 10px 0 0}
+.modal-box .kicker{color:var(--steel2)}
+.modal-box h3{color:var(--navy);font-size:30px;letter-spacing:-.03em}
+.modal-sub,.story,.modal-box p{color:#3d5568}
+.story strong,.modal-sub strong,.modal-box strong{color:var(--navy)}
+.close-x{background:var(--navy);color:#fff;border-radius:6px;width:34px;height:34px}.close-x:hover{background:var(--steel2)}
+.modal-preview{background:#eef3f7;border-radius:6px;border:1px solid #d5e1ea}
+.modal-meta .meta-item{background:#eef3f7;border:1px solid #d5e1ea;border-radius:6px}
+.modal-meta strong{color:var(--steel2)}
+.tech-chip{border-radius:4px;background:#fff;border:1px solid #c9d8e3;color:var(--navy)}
+.faro-workflow-figure,.faro-try-box,.bru-box{border-radius:8px;border-color:#d5e1ea}
+.faro-try-box,.bru-box{border-left:4px solid var(--steel2);background:#f4f8fb}
+.faro-workflow-figure{background:#f4f8fb}
+.bru-opt{border-radius:6px;border-color:#d5e1ea}.bru-privacy,.bru-preview{background:#e6eef4;border-radius:6px}.bru-tag{background:#cfdeea;color:var(--navy);border-radius:4px}
+.faro-workflow-link{color:var(--steel2);font-weight:600}
+.faro-modal-launch{border-radius:6px!important;background:linear-gradient(110deg,var(--steel2),var(--navy))!important;border:1px solid rgba(255,255,255,.35)!important;box-shadow:0 8px 20px rgba(20,33,61,.3)!important}
+.modal-actions .btn.alt{border-radius:6px;color:var(--navy);border-color:#c9d8e3}
+.faro-chat{border-radius:10px;border-color:#d5e1ea}.faro-chat-head{background:linear-gradient(110deg,var(--navy),var(--steel2))}
+.faro-demo-note{background:#e6eef4;color:var(--navy)}.faro-bubble.bot{background:#e6eef4}.faro-bubble.user{background:#cfdeea;color:var(--navy)}
+.faro-chat-form button{background:var(--steel2);border-radius:6px}.faro-chat-form button:hover{background:var(--navy)}.faro-chat-form input{border-radius:6px}
+.project .type{display:none}
+.project-open-indicator{background:transparent;box-shadow:none;color:var(--navy);font-size:20px}
+/* formas rectas */
+.shapes i{border-radius:0}
+.shapes .r1{width:620px;height:620px;right:-150px;top:-60px;transform:rotate(45deg);background:linear-gradient(135deg,rgba(111,147,179,.26),rgba(111,147,179,0) 65%);border:1px solid rgba(255,255,255,.10)}
+.shapes .r2{width:430px;height:430px;right:-20px;top:50px;transform:rotate(45deg);border:1px solid rgba(255,255,255,.18);background:none}
+.shapes .r3{width:240px;height:240px;right:80px;top:140px;transform:rotate(45deg);border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+.hero .photo{aspect-ratio:4/5;width:min(300px,100%);border-radius:4px;border:0;box-shadow:0 24px 60px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.28),14px 14px 0 -1px rgba(159,195,217,.22)}
+.hero .photo img{border-radius:0}
+.hero .placeholder strong{font-size:48px}
 </style>
 </head>
 
@@ -890,269 +997,72 @@ footer{
 
 <header>
 <div class="container nav">
-
-<a class="brand" href="#inicio">
-  Melisa García <span>Portfolio</span>
-</a>
-
+<a class="brand" href="#inicio"><span class="mark" aria-hidden="true"></span>Melisa García <span>Portfolio</span></a>
 <nav>
-
 <a href="#sobre-mi">Sobre mí</a>
+<a href="#enfoque">Enfoque</a>
 <a href="#proyectos">Proyectos</a>
-<a href="#contacto">Contacto</a>
-
-<a
-aria-label="LinkedIn"
-class="linkedin-link"
-href="https://www.linkedin.com/in/melisaailengarcia/"
-rel="noopener"
-target="_blank"
-title="LinkedIn">
-
-<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1-.001-4.124 2.062 2.062 0 0 1 .001 4.124zM6.941 20.452H3.733V9h3.208z"></path></svg>
-
-</a>
-
+<a class="navbtn" href="#contacto">Contacto</a>
+<a aria-label="LinkedIn" class="linkedin-link" href="https://www.linkedin.com/in/melisaailengarcia/" rel="noopener" target="_blank" title="LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1-.001-4.124 2.062 2.062 0 0 1 .001 4.124zM6.941 20.452H3.733V9h3.208z"></path></svg></a>
 </nav>
 </div>
 </header>
-
 <main>
-
-<!-- HERO -->
-
-<section class="hero container" id="inicio">
-
-<div>
-
-<div class="kicker">
-RRHH · People Analytics · HR Tech
+<section class="hero" id="inicio">
+<div class="shapes" aria-hidden="true"><i class="r1"></i><i class="r2"></i><i class="r3"></i><span class="dots"></span></div>
+<div class="container hero-in">
+<div class="hero-text">
+<div class="kicker">RRHH · People Analytics · HR Tech</div>
+<h1>Personas, datos y tecnología.</h1>
+<p class="lead">Portfolio profesional orientado a integrar Recursos Humanos, análisis de datos y herramientas digitales para transformar información en conocimiento útil para la gestión.</p>
 </div>
-
-<h1>
-Personas, datos y tecnología.
-</h1>
-
-<p class="lead">
-Portfolio profesional orientado a integrar Recursos Humanos,
-análisis de datos y herramientas digitales para transformar
-información en conocimiento útil para la gestión.
-</p>
-
-<div class="hero-actions">
-
-<a class="btn" href="#proyectos">
-Ver proyectos
-</a>
-
-<a class="btn alt" href="#sobre-mi">
-Conoceme
-</a>
-
+<!-- FOTO DE PERFIL: guardá tu foto con el nombre foto.jpg en la misma carpeta que este archivo
+     (o cambiá el src de abajo por la ruta de tu imagen). Hasta entonces se muestra el marco vacío. -->
+<div class="photo"><div class="placeholder"><strong>+</strong><small>Tu foto de perfil</small></div><img src="foto.jpg" alt="Foto de Melisa García" onerror="this.style.display='none'"></div>
 </div>
-
-</div>
-
-<div class="photo">
-
-<div class="placeholder">
-<strong>+</strong>
-<small>Tu foto de perfil</small>
-</div>
-
-</div>
-
 </section>
-
-<!-- SOBRE MI -->
-
-<section id="sobre-mi">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="kicker">
-Presentación
+<section class="lift" id="sobre-mi">
+<div class="container trio">
+<article class="card icard"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Quién soy</h3><p>Soy estudiante de Relaciones del Trabajo, con interés en el desarrollo del talento, People Analytics y el uso de herramientas digitales aplicadas a Recursos Humanos.</p><a class="btn small" href="#contacto">Contacto</a></article>
+<article class="card icard"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></div><h3>Hacia dónde apunto</h3><p>Busco desarrollar un perfil que combine conocimientos de RRHH con análisis de datos, visualización e innovación aplicada a la gestión de personas.</p><a class="btn small" href="#proyectos">Ver proyectos</a></article>
 </div>
-
-<h2>
-Acerca de mí
-</h2>
-
-</div>
-
-</div>
-
-<div class="about">
-
-<article class="card">
-
-<h3>
-Quién soy
-</h3>
-
-<p>
-Soy estudiante de Relaciones del Trabajo, con interés en el desarrollo
-del talento, People Analytics y el uso de herramientas digitales
-aplicadas a Recursos Humanos.
-</p>
-
-</article>
-
-<article class="card">
-
-<h3>
-Hacia dónde apunto
-</h3>
-
-<p>
-Busco desarrollar un perfil que combine conocimientos de RRHH
-con análisis de datos, visualización e innovación aplicada
-a la gestión de personas.
-</p>
-
-<div class="tags">
-
-<span class="tag">People Analytics</span>
-<span class="tag">Excel</span>
-<span class="tag">Power BI</span>
-<span class="tag">HR Tech</span>
-<span class="tag">IA aplicada</span>
-
-</div>
-
-</article>
-
-</div>
-</div>
-
 </section>
-
-<!-- PROYECTOS -->
-
-<section id="proyectos">
-
+<section class="focus" id="enfoque">
 <div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="kicker">
-Portfolio
+<h2 class="ctitle">Mi enfoque</h2>
+<div class="cols4">
+<div class="col"><div class="ico s"><svg viewBox="0 0 24 24"><path d="M4 18 10 12l4 4 6-8"/><path d="M15 8h5v5"/></svg></div><h4>People Analytics</h4><p>Datos aplicados a la gestión de personas.</p></div>
+<div class="col"><div class="ico s"><svg viewBox="0 0 24 24"><path d="M13 2 5 13h6l-1 9 8-11h-6z"/></svg></div><h4>HR Tech</h4><p>Herramientas digitales para RRHH.</p></div>
+<div class="col"><div class="ico s"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-3.5 10.9V17h7v-3.1A6 6 0 0 0 12 3z"/><path d="M9.5 20.5h5"/></svg></div><h4>IA aplicada</h4><p>Innovación al servicio de la gestión.</p></div>
+<div class="col"><div class="ico s"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/></svg></div><h4>Excel y Power BI</h4><p>Análisis y visualización de información.</p></div>
 </div>
-
-<h2>
-Mis proyectos
-</h2>
-
-<p class="sub">
-Explorá proyectos de análisis, visualización y aplicaciones
-digitales orientadas a Recursos Humanos.
-</p>
-
 </div>
-
+</section>
+<section class="dark" id="proyectos">
+<div class="container">
+<h2 class="ctitle w">Proyectos</h2>
+<p class="sub w">Explorá proyectos de análisis, visualización y aplicaciones digitales orientadas a Recursos Humanos.</p>
+<div class="tabs c">
+<button class="tab active" data-cat="HR Tech">HR Tech</button>
+<button class="tab" data-cat="Excel">Excel</button>
+<button class="tab" data-cat="Power BI">Power BI</button>
 </div>
-
-<div class="tabs">
-
-<button class="tab active" data-cat="HR Tech">
-HR Tech
-</button>
-
-<button class="tab" data-cat="Excel">
-Excel
-</button>
-
-<button class="tab" data-cat="Power BI">
-Power BI
-</button>
-
-</div>
-
 <div class="projects" id="projectList"></div>
-
 </div>
-
 </section>
-
-<!-- CONTACTO -->
-
-<section id="contacto">
-
+<section class="dark contact" id="contacto">
 <div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="kicker">
-Contacto
-</div>
-
-<h2>
-Información de contacto
-</h2>
-
-</div>
-
-</div>
-
+<h2 class="ctitle w">Contacto</h2>
 <div class="card contact-card">
-
 <div class="contact-main">
-
-<div>
-<span class="contact-label">
-E-mail
-</span>
+<div><span class="contact-label">E-mail</span></div>
+<a class="contact-link" href="mailto:garcia.melisa.98@gmail.com"><strong>garcia.melisa.98@gmail.com</strong></a>
+<a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Rosario%2C%20Santa%20Fe%2C%20Argentina" rel="noopener" target="_blank"><span>Rosario, Santa Fe, Argentina</span></a>
 </div>
-
-<a
-class="contact-link"
-href="mailto:garcia.melisa.98@gmail.com">
-
-<strong>
-garcia.melisa.98@gmail.com
-</strong>
-
-</a>
-
-<a
-class="contact-link"
-href="https://www.google.com/maps/search/?api=1&query=Rosario%2C%20Santa%20Fe%2C%20Argentina"
-rel="noopener"
-target="_blank">
-
-<span>
-Rosario, Santa Fe, Argentina
-</span>
-
-</a>
-
-</div>
-
-<a
-aria-label="Perfil de LinkedIn"
-class="linkedin-link"
-href="https://www.linkedin.com/in/melisaailengarcia/"
-rel="noopener"
-target="_blank"
-title="LinkedIn">
-
-<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1-.001-4.124 2.062 2.062 0 0 1 .001 4.124zM6.941 20.452H3.733V9h3.208z"></path></svg>
-
-</a>
-
+<a aria-label="Perfil de LinkedIn" class="linkedin-link" href="https://www.linkedin.com/in/melisaailengarcia/" rel="noopener" target="_blank" title="LinkedIn"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1-.001-4.124 2.062 2.062 0 0 1 .001 4.124zM6.941 20.452H3.733V9h3.208z"></path></svg></a>
 </div>
 </div>
-
 </section>
-
 </main>
 
 <footer>
@@ -1245,6 +1155,24 @@ HR Tech
 <div class="faro-try-box hidden" id="faroTryBox"><p><strong>💬 ¿Querés probar cómo funciona?</strong></p><p>Hacé clic en el botón <strong>«CONVERSAR CON FARO»</strong> que aparece debajo de estos pasos. La conversación se realiza en el portfolio. Al terminar, ingresá un email real para recibir el resultado de la simulación.</p></div>
 
 
+<div class="bru-box hidden" id="brujulaBox">
+<p><strong>🧭 Probá Brújula con un currículum de demostración</strong></p>
+<p>Elegí una de las dos opciones.</p>
+<div class="bru-opt"><h4>Opción 1 · Generar un currículum ficticio <span class="bru-tag">Recomendada</span></h4>
+<p>Se crea un currículum en PDF con un perfil inventado, sin datos de ninguna persona real, así que no necesitás dar consentimiento. Podés descargarlo y enviarlo a Brújula.</p>
+<div class="bru-preview" id="bruFakePreview">Todavía no generaste ninguno.</div>
+<div class="bru-row"><button type="button" class="btn alt small" id="bruGen">Generar currículum ficticio</button><a class="btn alt small bru-dl" id="bruDl" aria-disabled="true">Descargar PDF</a><button type="button" class="btn small" id="bruSendFake" disabled>Enviar a Brújula</button><button type="button" class="btn ghost small" id="bruClearFake">Limpiar</button></div></div>
+<div class="bru-opt"><h4>Opción 2 · Subir mi currículum real (PDF)</h4>
+<div class="bru-privacy"><strong>Qué va a pasar con tu información</strong><ul>
+<li>Puede contener datos personales (nombre, teléfono, mail, domicilio). Por eso te recomendamos <strong>quitarlos antes</strong> de subirlo.</li>
+<li>Solo Melisa García puede verlo. Se usa únicamente para mostrar cómo funciona Brújula y no se comparte con terceros.</li>
+<li>Podés pedir que lo borren escribiendo a portfolio.melisagarcia@gmail.com.</li></ul></div>
+<label class="bru-check"><input type="checkbox" id="bruConsent"> Leí y entiendo lo que va a pasar con mi información, y doy mi consentimiento para que se guarde mi currículum con esa finalidad.</label>
+<div class="bru-row"><input type="file" id="bruFile" accept="application/pdf,.pdf" hidden><button type="button" class="btn alt small" id="bruChoose" disabled>Elegir archivo</button><span class="bru-fname" id="bruFname">Ningún archivo seleccionado</span><button type="button" class="btn small" id="bruSendReal" disabled>Enviar a Brújula</button><button type="button" class="btn ghost small" id="bruClearReal">Limpiar</button></div>
+<p class="bru-note">Solo PDF, hasta 2 MB. El botón para elegir el archivo se habilita cuando marcás la casilla.</p></div>
+<p class="bru-status" id="bruStatus" role="status"></p>
+<a class="btn alt small bru-open hidden" id="bruOpen" href="#" target="_blank" rel="noopener">Abrir Brújula ↗</a>
+</div>
 <div class="modal-actions">
 
 <button
@@ -1449,11 +1377,27 @@ const nexolabProject={id:'nexolab',cat:'HR Tech',name:'NexoLab',desc:nexolabDesc
    ESTADO
 ========================================================= */
 
+const brujulaLogoData='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5b8aa8"/><stop offset="1" stop-color="#14213d"/></linearGradient></defs><circle cx="60" cy="60" r="54" fill="url(#b)"/><circle cx="60" cy="60" r="46" fill="none" stroke="#c0d6df" stroke-width="2"/><path d="M80 34 66 62 40 86 54 58z" fill="#fff"/><circle cx="60" cy="60" r="4" fill="#b08968"/></svg>`);
+/* ===== CONFIGURACIÓN DE BRÚJULA: completá estas dos direcciones cuando estén listas ===== */
+const BRUJULA_URL='';      // dirección de Brújula en GitHub Pages
+const BRUJULA_WEBHOOK='';  // dirección del Webhook de n8n que recibe los currículums
+const brujulaProject={id:'brujula',cat:'HR Tech',name:'Brújula',image:brujulaLogoData,technologies:'HTML · CSS · JavaScript · n8n · GitHub Pages',
+desc:`Brújula es un ATS (Applicant Tracking System, o sistema de seguimiento de postulantes): una herramienta que lee currículums y los contrasta con los requisitos que se solicitan para un puesto. Sirve para revisar perfiles de manera ordenada y explicable, tanto desde el rol de quien recluta como desde el de quien se postula.`,
+story:`**🧭 Cómo se usa:** Brújula tiene dos modos. **Para reclutadores** permite comparar varios currículums con los requisitos de un puesto y ver cuáles se ajustan mejor. **Para candidatos** permite contrastar el propio CV con un aviso de empleo e identificar qué palabras clave faltan. Para conocer el detalle, lo mejor es abrir Brújula y probarla.
+
+**⚖️ Cómo puntúa (0 a 100):** el puntaje se reparte así: **70 puntos** por los requisitos excluyentes, **20** por los deseables y **10** por los términos de la descripción del puesto. Cada grupo suma según la proporción de criterios que aparecen en el CV. Por ejemplo, si el CV cumple 3 de 4 excluyentes, aporta 52,5 de los 70 puntos.
+
+**🔎 Por qué es orientativo:** Brújula busca coincidencias de texto: encuentra la palabra escrita igual o en algunas variantes comunes, pero no entiende el contexto ni las equivalencias. Un CV puede decir "gestión de nómina" y Brújula no relacionarlo con "liquidación de sueldos", o nombrar una herramienta sin saber usarla. Es por eso que un CV con buen puntaje puede no ser el mejor y uno con puntaje bajo puede resultar valioso. En consecuencia, la decisión final corresponde siempre a una persona.
+
+**🔄 Cola de revisión:** cada currículum que llega desde este portfolio se puntúa. Si obtiene **60 puntos o más**, queda como **Pendiente de revisión**. Si obtiene menos de 60, pasa a **Archivado**. Los archivados pueden reabrirse para una revisión manual.
+
+**🛠️ Cómo está hecha:** es una página web estática en HTML, CSS y JavaScript, publicada en GitHub Pages. Los PDF se leen en el navegador. Un flujo de n8n recibe los currículums enviados desde el portfolio y los envía a Brújula.`};
 let currentCat='HR Tech';
 
 let projects=[
   faroProject,
-  nexolabProject
+  nexolabProject,
+  brujulaProject
 ];
 
 
@@ -1601,6 +1545,8 @@ document.getElementById('faroWorkflowFigure').classList.toggle('hidden',p.id!=='
 document.getElementById('faroTryBox').classList.toggle('hidden',p.id!=='faro');
 document.getElementById('nexolabDemoLink').classList.toggle('hidden',p.id!=='nexolab');
 document.getElementById('faroModalOpen').classList.toggle('hidden',p.id!=='faro');
+document.getElementById('brujulaBox').classList.toggle('hidden',p.id!=='brujula');
+brujulaInit();
 
 const image=
 document.getElementById('projectModalImage');
@@ -2092,13 +2038,9 @@ faroChat.classList.remove('open');
    ENVÍO DEL CHAT
 ========================================================= */
 
-document
-.getElementById('faroForm')
-.addEventListener(
-'submit',
-async e=>{
+async function faroHandleSend(e){
 
-e.preventDefault();
+if(e)e.preventDefault();
 
 const message=
 faroInput.value.trim();
@@ -2152,7 +2094,7 @@ project:'faro-rrhh'
 })
 });
 
-if(!response.ok) throw new Error('Webhook error');
+if(!response.ok) throw new Error('HTTP '+response.status);
 
 faroSentToN8n=true;
 
@@ -2167,7 +2109,7 @@ catch(error){
 console.error(error);
 
 faroAddMessage(
-'No pude conectar con n8n. Verificá que el Webhook esté activo y que acepte solicitudes desde esta página.',
+'No pude conectar con n8n. Verificá que el Webhook esté activo y que acepte solicitudes desde esta página. (Detalle: '+(/^HTTP/.test(error.message)?'n8n respondió con error '+error.message.replace('HTTP ','')+', revisá la pestaña Executions':'el navegador bloqueó o no pudo completar la solicitud, posible CORS o dirección incorrecta. Origen de esta página: '+location.origin)+')',
 'bot'
 );
 
@@ -2181,7 +2123,12 @@ faroInput.focus();
 
 }
 
-});
+}
+/* No depende del envío nativo del formulario (algunas vistas previas lo bloquean) */
+faroSend.type='button';
+faroSend.addEventListener('click',faroHandleSend);
+faroInput.addEventListener('keydown',ev=>{if(ev.key==='Enter'){ev.preventDefault();faroHandleSend()}});
+document.getElementById('faroForm').addEventListener('submit',faroHandleSend);
 
 
 /* =========================================================
@@ -2190,6 +2137,115 @@ faroInput.focus();
 
 renderProjects();
 
+
+/* =========================================================
+   BRÚJULA · envío de currículums de demostración
+========================================================= */
+const bruNames=['Lucía Benítez','Martín Quiroga','Camila Ferreyra','Tomás Aguirre','Valentina Ríos','Joaquín Salinas','Agustina Peralta','Nicolás Cabrera','Julieta Montes','Bruno Escobar'];
+const bruPick=a=>a[Math.floor(Math.random()*a.length)];
+const bruShuffle=a=>[...a].sort(()=>Math.random()-.5);
+const bruChance=p=>Math.random()<p;
+const bruRoles=[
+{role:'Analista de RRHH',jobs:['Asistente de Recursos Humanos','Auxiliar de selección de personal'],
+ tasks:['Publicación de búsquedas en portales de empleo y redes sociales','Preselección de currículums y coordinación de entrevistas','Armado de legajos y carga de altas y bajas en el sistema','Seguimiento del onboarding de nuevos ingresos','Elaboración de reportes de ausentismo en Excel','Atención de consultas del personal sobre licencias y recibos'],
+ skills:['Reclutamiento y selección','Excel','Power BI','Onboarding','Comunicación','Gestión de legajos','Liquidación de sueldos'],
+ degrees:['Licenciatura en Relaciones del Trabajo','Tecnicatura en Gestión de Recursos Humanos'],
+ courses:['Curso de Excel avanzado (40 h)','Taller de entrevistas por competencias','Curso de Power BI inicial','Curso de legislación laboral básica']},
+{role:'Administrativo/a contable',jobs:['Auxiliar administrativo/a','Asistente contable'],
+ tasks:['Carga de facturas y comprobantes en el sistema contable','Atención telefónica y presencial a clientes y proveedores','Archivo y control de documentación','Conciliación y arqueo de caja diaria','Seguimiento de pedidos y entregas con proveedores','Armado de planillas de control en Excel'],
+ skills:['Excel','Facturación','Atención al cliente','Gestión documental','Google Workspace','Conciliaciones bancarias','Tango Gestión'],
+ degrees:['Tecnicatura en Administración de Empresas','Licenciatura en Administración'],
+ courses:['Curso de Excel intermedio (30 h)','Curso de facturación electrónica','Taller de atención al cliente','Curso de Tango Gestión']},
+{role:'Analista de datos',jobs:['Analista junior de datos','Asistente de reportes y métricas'],
+ tasks:['Consultas SQL para extraer información de la base de ventas','Limpieza y análisis de datos con Python (pandas)','Armado de dashboards en Power BI para el equipo comercial','Presentación de métricas al equipo de producto','Documentación de los procesos de reporte','Trabajo con metodologías ágiles en sprints semanales'],
+ skills:['SQL','Python','Power BI','Excel','Metodologías ágiles','Estadística','Visualización de datos'],
+ degrees:['Licenciatura en Estadística','Tecnicatura en Ciencia de Datos'],
+ courses:['Curso de SQL para análisis de datos (30 h)','Curso de Python para datos','Curso de Power BI intermedio','Taller de visualización de datos']}];
+const bruTypos={'Excel':['Exel','Microsoft Excel','excel'],'Power BI':['PowerBI','Power Bi'],'Python':['Pyton','python'],'SQL':['Sql','SQL Server']};
+const bruCompanies=['Grupo Alba S.A.','Estudio Norte','Servicios Cuyo S.R.L.','Comercial del Litoral','Distribuidora Pampa','Consultora Horizonte'];
+const bruUnis=['Universidad Nacional del Plata Austral','Universidad Tecnológica del Litoral Sur','Instituto Superior San Telmo del Sur','Universidad Abierta de los Andes'];
+const bruVolunt=['Voluntariado en Fundación Brotes: organización de colectas y atención a familias','Voluntariado en Comedor Barrio Esperanza: coordinación de turnos y registro de donaciones','Voluntariado en Biblioteca Popular Rayuela: apoyo escolar y actividades de lectura'];
+const bruSkin=[[.98,.80,.66],[.65,.82,.95],[.72,.90,.72],[.98,.85,.55],[.85,.75,.95],[.96,.72,.62]];
+const bruHair=[[.15,.12,.12],[.45,.25,.12],[.85,.55,.15],[.35,.20,.55],[.10,.35,.55],[.55,.55,.58]];
+const bruBg=[[.80,.88,.95],[.95,.88,.78],[.86,.93,.86],[.93,.84,.90]];
+function bruMakeFake(){const r=bruPick(bruRoles),name=bruPick(bruNames),years=bruPick([0,0,1,1,2,3,4,6]);
+const end=2026;let jobs=[];
+const pool=bruShuffle(r.tasks);if(years>0){const nj=years>=3?2:1;const names=bruShuffle(r.jobs).slice(0,nj);let cur=end;
+names.forEach((j,i)=>{const dur=nj===2?Math.max(1,Math.round(years/2)):years;jobs.push({puesto:j,empresa:bruPick(bruCompanies),desde:cur-dur,hasta:i===0?'actualidad':cur,tasks:pool.splice(0,nj===2?3:3+Math.floor(Math.random()*2))});cur-=dur})}
+let skills=bruShuffle(r.skills).slice(0,3+Math.floor(Math.random()*3));
+const style=bruPick(['levels','mixed','plain']);const lv=['básico','intermedio','avanzado'];
+skills=skills.map(sk=>{let label=sk;if(bruTypos[sk]&&bruChance(.35))label=bruPick(bruTypos[sk]);
+const withLevel=style==='levels'||(style==='mixed'&&bruChance(.5));return withLevel?(bruChance(.5)?label+' ('+bruPick(lv)+')':label+' - nivel '+bruPick(lv)):label});
+let idiomas=null;const ir=Math.random();if(ir<.25)idiomas=null;else if(ir<.5)idiomas='Inglés';else if(ir<.75)idiomas='Inglés: '+bruPick(['B1','B2','intermedio','avanzado','C1']);else idiomas='Inglés: '+bruPick(['B2','intermedio'])+'. Portugués: básico';
+const dur=bruPick([3,4,5]);const cursando=bruChance(.4)||years===0;const finYear=cursando?null:end-bruPick([1,2,3,5]);const ini=cursando?end-bruPick([1,2,3]):finYear-dur;
+const edu={titulo:bruPick(r.degrees),uni:bruPick(bruUnis),ini,fin:finYear};
+const courses=bruChance(.55)?bruShuffle(r.courses).slice(0,1+Math.floor(Math.random()*2)).map(c=>c+', '+(end-bruPick([0,1,2,3]))):[];
+const volunt=bruChance(.4)?bruPick(bruVolunt)+' ('+(end-bruPick([2,3,4]))+')':null;
+const av={skin:bruPick(bruSkin),hair:bruPick(bruHair),bg:bruPick(bruBg),glasses:bruChance(.4)};
+return {name:name+' (ficticio)',role:r.role,years,jobs,skills,skillTitle:bruPick(['HABILIDADES','CONOCIMIENTOS','HERRAMIENTAS Y HABILIDADES']),idiomas,edu,courses,volunt,av}}
+function bruProfile(f){const first=f.name.split(' ')[0],r=f.role.toLowerCase();
+if(f.years===0)return bruPick(['Recién egresado/a en búsqueda de mi primera experiencia laboral como '+r+'. Me interesa aprender, sumar herramientas y crecer dentro de un equipo comprometido.','Estudiante avanzado/a con interés en el área de '+r+'. Busco una primera oportunidad para aplicar lo aprendido y desarrollarme profesionalmente. Responsable, proactivo/a y con ganas de aprender.']);
+if(f.years<=2)return bruPick(['Profesional con '+f.years+' año(s) de experiencia como '+r+'. Organizado/a y con buena comunicación, busco seguir creciendo en un entorno que me permita asumir nuevos desafíos.','Perfil junior con experiencia en tareas de '+r+'. Me destaco por la responsabilidad, el trabajo en equipo y la rapidez para aprender nuevas herramientas.']);
+return bruPick(['Profesional con más de '+f.years+' años de trayectoria como '+r+'. Experiencia en coordinación de tareas, mejora de procesos y trabajo con distintas áreas. Orientado/a a resultados y al trabajo colaborativo.','Perfil con sólida experiencia en '+r+', acostumbrado/a a trabajar con objetivos y plazos. Busco un rol con mayor responsabilidad donde pueda aportar mi recorrido.'])}
+function bruFakeLines(f){const L=[],h=t=>L.push({t,size:12,bold:true}),p=(t,sz)=>L.push({t,size:sz||10.5}),g=()=>L.push({t:' ',size:6}),bl=t=>L.push({t:'- '+t,size:10.5});
+L.push({t:f.name,size:20,bold:true});L.push({t:f.role,size:13});g();
+h('PERFIL');p(bruProfile(f));g();
+if(f.jobs.length){h('EXPERIENCIA LABORAL');f.jobs.forEach(j=>{L.push({t:j.puesto+' - '+j.empresa,size:11,bold:true});p(j.desde+' - '+j.hasta);j.tasks.forEach(bl);g()})}
+h(f.skillTitle);f.skills.forEach(bl);g();
+if(f.idiomas){h('IDIOMAS');p(f.idiomas);g()}
+h('FORMACION');p(f.edu.titulo+' - '+f.edu.uni);p(f.edu.fin?(f.edu.ini+' - '+f.edu.fin):(f.edu.ini+' - en curso'));g();
+if(f.courses.length){h('CURSOS');f.courses.forEach(bl);g()}
+if(f.volunt){h('VOLUNTARIADO');p(f.volunt)}
+return L}
+function bruAvatarSvg(a){const c=x=>'rgb('+x.map(v=>Math.round(v*255)).join(',')+')';
+return '<svg viewBox="0 0 100 100" width="84" height="84" aria-hidden="true"><defs><clipPath id="bruClip"><rect width="100" height="100" rx="14"/></clipPath></defs><g clip-path="url(#bruClip)"><rect width="100" height="100" fill="'+c(a.bg)+'"/><circle cx="50" cy="112" r="38" fill="#3f6f90"/><circle cx="50" cy="40" r="30" fill="'+c(a.hair)+'"/><circle cx="50" cy="48" r="26" fill="'+c(a.skin)+'"/><circle cx="41" cy="47" r="3" fill="#222"/><circle cx="59" cy="47" r="3" fill="#222"/><circle cx="35" cy="57" r="4" fill="#f4b6b6"/><circle cx="65" cy="57" r="4" fill="#f4b6b6"/><path d="M41 58 C45 66 55 66 59 58" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round"/>'+(a.glasses?'<circle cx="41" cy="47" r="7" fill="none" stroke="#222" stroke-width="1.5"/><circle cx="59" cy="47" r="7" fill="none" stroke="#222" stroke-width="1.5"/><path d="M48 47h4" stroke="#222" stroke-width="1.5"/>':'')+'</g></svg>'}
+function bruAvatarPdf(a,x,y,size){const s=size/100,X=u=>(x+u*s).toFixed(2),Y=u=>(y+size-u*s).toFixed(2),R=u=>(u*s).toFixed(2);
+const circ=(cx,cy,r)=>{const k=.5523*r,x0=cx,y0=cy;return X(x0+r)+' '+Y(y0)+' m '+X(x0+r)+' '+Y(y0-k)+' '+X(x0+k)+' '+Y(y0-r)+' '+X(x0)+' '+Y(y0-r)+' c '+X(x0-k)+' '+Y(y0-r)+' '+X(x0-r)+' '+Y(y0-k)+' '+X(x0-r)+' '+Y(y0)+' c '+X(x0-r)+' '+Y(y0+k)+' '+X(x0-k)+' '+Y(y0+r)+' '+X(x0)+' '+Y(y0+r)+' c '+X(x0+k)+' '+Y(y0+r)+' '+X(x0+r)+' '+Y(y0+k)+' '+X(x0+r)+' '+Y(y0)+' c h '};
+const fill=(col,cx,cy,r)=>col.map(v=>v.toFixed(2)).join(' ')+' rg '+circ(cx,cy,r)+' f\n';
+let o='q '+X(0)+' '+Y(100)+' '+R(100)+' '+R(100)+' re W n\n';
+o+=a.bg.map(v=>v.toFixed(2)).join(' ')+' rg '+X(0)+' '+Y(100)+' '+R(100)+' '+R(100)+' re f\n';
+o+=fill([.25,.44,.56],50,112,38)+fill(a.hair,50,40,30)+fill(a.skin,50,48,26)+fill([.13,.13,.13],41,47,3)+fill([.13,.13,.13],59,47,3)+fill([.96,.71,.71],35,57,4)+fill([.96,.71,.71],65,57,4);
+o+='0.13 0.13 0.13 RG '+(2*s).toFixed(2)+' w 1 J '+X(41)+' '+Y(58)+' m '+X(45)+' '+Y(66)+' '+X(55)+' '+Y(66)+' '+X(59)+' '+Y(58)+' c S\n';
+if(a.glasses){o+=(1.5*s).toFixed(2)+' w '+circ(41,47,7)+' S '+circ(59,47,7)+' S '+X(48)+' '+Y(47)+' m '+X(52)+' '+Y(47)+' l S\n'}
+return o+'Q\n'}
+/* PDF mínimo hecho a mano: varias páginas A4 si hace falta, tipografía Helvetica */
+function bruPdfBlob(items,av){const esc=t=>t.replace(/[\\()]/g,'\\$&');const bin=t=>{let o='';for(const ch of t)o+=ch.charCodeAt(0)<256?ch:'?';return o};
+const pages=[];let cs=bruAvatarPdf(av,470,730,76),y=790,pg=0;
+for(const it of items){const font=it.bold?'/F2':'/F1',width=(pg===0&&y>690)?390:495,max=Math.max(20,Math.floor(width/(it.size*0.5)));
+const words=it.t.split(' ');let line='';const lines=[];for(const w of words){if((line+' '+w).trim().length>max){lines.push(line);line=w}else line=(line+' '+w).trim()}lines.push(line);
+for(const l of lines){if(y<60){pages.push(cs);cs='';y=790;pg++}cs+='BT '+font+' '+it.size+' Tf 50 '+y.toFixed(1)+' Td ('+esc(l)+') Tj ET\n';y-=it.size+5}}
+pages.push(cs);
+const objs=['<< /Type /Catalog /Pages 2 0 R >>','','<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>','<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>'];
+const kids=[];pages.forEach((c,i)=>{const pn=5+2*i,cn=6+2*i;kids.push(pn+' 0 R');const body=bin(c);objs[pn-1]='<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents '+cn+' 0 R >>';objs[cn-1]='<< /Length '+body.length+' >>\nstream\n'+body+'endstream'});
+objs[1]='<< /Type /Pages /Kids ['+kids.join(' ')+'] /Count '+pages.length+' >>';
+let out='%PDF-1.4\n';const offs=[];objs.forEach((o,i)=>{offs.push(out.length);out+=(i+1)+' 0 obj\n'+o+'\nendobj\n'});
+const x=out.length;out+='xref\n0 '+(objs.length+1)+'\n0000000000 65535 f \n'+offs.map(o=>String(o).padStart(10,'0')+' 00000 n \n').join('')+'trailer\n<< /Size '+(objs.length+1)+' /Root 1 0 R >>\nstartxref\n'+x+'\n%%EOF';
+const u=new Uint8Array(out.length);for(let i=0;i<out.length;i++)u[i]=out.charCodeAt(i)&255;return new Blob([u],{type:'application/pdf'})}
+function bruStatus(msg,ok){const el=document.getElementById('bruStatus');el.textContent=msg;el.style.color=ok===false?'#7d2b2b':'var(--baltic-blue)'}
+async function bruSend(fd){if(!BRUJULA_WEBHOOK){bruStatus('El envío todavía no está conectado: falta configurar la dirección del flujo de n8n (BRUJULA_WEBHOOK). No se envió nada.',false);return}
+try{bruStatus('Enviando…');const r=await fetch(BRUJULA_WEBHOOK,{method:'POST',body:fd});if(!r.ok)throw new Error(r.status);bruStatus('Listo: el PDF se envió a Brújula.')}catch(e){bruStatus('No se pudo enviar. Probá de nuevo más tarde.',false)}}
+let bruReady=false,bruFake=null,bruFakeFile=null,bruUrl=null;
+function brujulaInit(){const open=document.getElementById('bruOpen');if(BRUJULA_URL){open.href=BRUJULA_URL;open.classList.remove('hidden')}else open.classList.add('hidden');
+if(bruReady)return;bruReady=true;
+const consent=document.getElementById('bruConsent'),file=document.getElementById('bruFile'),sendReal=document.getElementById('bruSendReal'),dl=document.getElementById('bruDl');
+const choose=document.getElementById('bruChoose'),fname=document.getElementById('bruFname');
+const clearReal=()=>{file.value='';fname.textContent='Ningún archivo seleccionado';bruStatus('')};
+consent.addEventListener('change',()=>{choose.disabled=!consent.checked;sendReal.disabled=!consent.checked;if(!consent.checked)clearReal()});
+choose.addEventListener('click',()=>file.click());
+file.addEventListener('change',()=>{fname.textContent=file.files[0]?file.files[0].name:'Ningún archivo seleccionado'});
+document.getElementById('bruClearReal').addEventListener('click',clearReal);
+document.getElementById('bruClearFake').addEventListener('click',()=>{bruFake=null;bruFakeFile=null;if(bruUrl){URL.revokeObjectURL(bruUrl);bruUrl=null}dl.removeAttribute('href');dl.removeAttribute('download');dl.setAttribute('aria-disabled','true');document.getElementById('bruFakePreview').textContent='Todavía no generaste ninguno.';document.getElementById('bruSendFake').disabled=true;bruStatus('')});
+document.getElementById('bruGen').addEventListener('click',()=>{bruFake=bruMakeFake();const items=bruFakeLines(bruFake);const blob=bruPdfBlob(items,bruFake.av);const fname='cv-ficticio-'+bruFake.name.split(' ')[0].toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')+'.pdf';
+bruFakeFile=new File([blob],fname,{type:'application/pdf'});if(bruUrl)URL.revokeObjectURL(bruUrl);bruUrl=URL.createObjectURL(bruFakeFile);
+dl.href=bruUrl;dl.download=fname;dl.removeAttribute('aria-disabled');
+const pv=document.getElementById('bruFakePreview');pv.innerHTML='<div class="bru-pv">'+bruAvatarSvg(bruFake.av)+'<div></div></div>';pv.querySelector('.bru-pv > div').textContent=items.filter(i=>i.t.trim()).map(i=>i.t).join('\n')+'\n\n[PDF listo: '+fname+']';
+document.getElementById('bruSendFake').disabled=false;bruStatus('')});
+document.getElementById('bruSendFake').addEventListener('click',()=>{if(!bruFakeFile)return;const fd=new FormData();fd.append('tipo','ficticio');fd.append('nombre',bruFake.name);fd.append('archivo',bruFakeFile,bruFakeFile.name);bruSend(fd)});
+sendReal.addEventListener('click',()=>{const f=file.files[0];if(!consent.checked){bruStatus('Marcá la casilla de consentimiento para continuar.',false);return}
+if(!f){bruStatus('Elegí un archivo PDF.',false);return}
+if(f.type!=='application/pdf'&&!/\.pdf$/i.test(f.name)){bruStatus('El archivo tiene que ser un PDF.',false);return}
+if(f.size>2*1024*1024){bruStatus('El PDF supera los 2 MB.',false);return}
+const fd=new FormData();fd.append('tipo','real');fd.append('consentimiento','aceptado');fd.append('fecha_consentimiento',new Date().toISOString());fd.append('archivo',f,f.name);bruSend(fd)})}
 </script>
 
 </body>
