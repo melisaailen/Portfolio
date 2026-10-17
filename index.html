@@ -573,7 +573,9 @@ h2{
 .modal-preview img{
   width:100%;
   height:auto;
-  max-height:480px;
+  max-width:230px;
+  max-height:230px;
+  margin:22px auto;
   object-fit:contain;
   display:none;
 }
@@ -606,7 +608,6 @@ h2{
 .modal-sub+.faro-workflow-link{margin-top:12px}
 .tech-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;min-height:64px;justify-content:flex-start;align-content:center;align-items:center}
 .tech-chip{display:inline-flex;align-items:center;padding:5px 8px;border-radius:999px;background:#fff;border:1px solid rgba(22,96,136,.12);font-size:12px;line-height:1.3;color:var(--ink);white-space:nowrap}
-.project[data-project-id="nexolab"] .project-preview-thumb img{object-position:center 58%}
 
 .modal-meta strong{
   display:block;
@@ -888,8 +889,8 @@ footer{
 :root{--navy:#14213d;--navy2:#1b2f55;--steel:#5b8aa8;--steel2:#3f6f90}
 body{background:#eef3f7}
 header{position:fixed;left:0;right:0;top:0;background:linear-gradient(180deg,rgba(14,26,48,.82),rgba(14,26,48,.35));border:0;backdrop-filter:blur(6px)}
-.brand{color:#fff;display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}.brand span:not(.mark){color:#9fc3d9;font-weight:500}
-.mark{width:26px;height:26px;background:linear-gradient(135deg,#9fc3d9,#4a6fa5);clip-path:polygon(50% 0,100% 100%,0 100%,38% 62%)}
+.brand{color:#fff;display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.02em}.brand span:not(.mark){color:#9fc3d9;font-weight:500}
+.mark{width:23px;height:23px;flex:none;transform:translateY(-5px);background:linear-gradient(135deg,#9fc3d9,#4a6fa5);clip-path:polygon(50% 0,100% 100%,0 100%,38% 62%)}
 nav{display:flex;align-items:center}nav a{color:#e6eef4;margin-left:26px}nav a:hover{color:#fff}
 nav .navbtn{background:var(--steel2);padding:10px 20px;border-radius:6px;color:#fff;font-weight:600}nav .navbtn:hover{background:var(--steel)}
 .linkedin-link{border-radius:6px;width:40px;height:40px}
@@ -1282,44 +1283,34 @@ Enviar
    LOGO FARO
 ========================================================= */
 
-const faroLogoData =
-'data:image/svg+xml;charset=UTF-8,' +
-encodeURIComponent(`
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-
+const faroLogoData = 'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
 <defs>
-
-<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-
-<stop stop-color="#803fe0"/>
-
-<stop offset="1" stop-color="#e347a9"/>
-
-</linearGradient>
-
+<linearGradient id="bgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f86ad"/><stop offset="1" stop-color="#183b4a"/></linearGradient>
+<linearGradient id="hlf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="glf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c0d6df"/></linearGradient>
+<linearGradient id="acf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe3a3"/><stop offset="1" stop-color="#e0a95a"/></linearGradient>
+<filter id="shf" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#0b2433" flood-opacity=".38"/></filter>
+<filter id="tsf" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#183b4a" flood-opacity=".35"/></filter>
+<clipPath id="cpf"><rect x="6" y="6" width="108" height="108" rx="22"/></clipPath>
 </defs>
+<rect x="6" y="6" width="108" height="108" rx="22" fill="url(#bgf)" filter="url(#tsf)"/>
+<g clip-path="url(#cpf)">
 
-<path
-d="M50 3 91 26v48L50 97 9 74V26z"
-fill="url(#g)"
-stroke="#dba9ff"
-stroke-width="2"/>
-
-<path
-d="M34 72V28h35v9H45v9h21v9H45v17z"
-fill="#fff"/>
-
-<circle
-cx="69"
-cy="57"
-r="7"
-fill="#ffcf45"/>
-
-</svg>
-
-`);
-
+<path d="M60 49 8 30v38z" fill="#fff" opacity=".22"/><path d="M60 49 112 30v38z" fill="#fff" opacity=".22"/>
+<path d="M60 49 8 40v18z" fill="#fff" opacity=".3"/><path d="M60 49 112 40v18z" fill="#fff" opacity=".3"/>
+<path d="M0 100q15-7 30 0t30 0 30 0 30 0V120H0z" fill="#0f3347" opacity=".55"/>
+<g filter="url(#shf)">
+<path d="M50 102 54 56h12l4 46z" fill="url(#glf)"/>
+<path d="M52.6 78 53.4 70h13.2l.8 8zM50.8 98 51.7 90h16.6l.9 8z" fill="#4a6fa5"/>
+<rect x="47" y="52" width="26" height="5" rx="1.5" fill="#fff"/>
+<rect x="53" y="40" width="14" height="12" rx="1.5" fill="url(#acf)"/>
+<path d="M50 40 60 29 70 40z" fill="#fff"/>
+<circle cx="60" cy="26" r="2.4" fill="#fff"/>
+</g>
+<rect x="6" y="6" width="108" height="62" fill="url(#hlf)"/>
+</g>
+<rect x="7" y="7" width="106" height="106" rx="21" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="1.4"/>
+</svg>`);
 
 /* =========================================================
    PROYECTO FARO
@@ -1354,7 +1345,28 @@ const faroProject = {
 };
 
 
-const nexolabLogoData='data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="620" height="180" viewBox="-36 0 620 180"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087e83"/><stop offset="1" stop-color="#174d61"/></linearGradient></defs><rect x="18" y="18" width="144" height="144" rx="44" fill="url(#g)"/><path d="M50 126V70h14l42 35V70h14v56h-14L64 91v35H50Z" fill="white"/><circle cx="133" cy="49" r="10" fill="#9de3da"/><text x="190" y="123" fill="#112e40" font-family="Arial,sans-serif" font-size="82" font-weight="700">NexoLab</text></svg>');
+const nexolabLogoData='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<defs>
+<linearGradient id="bgn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a8bc4"/><stop offset="1" stop-color="#166088"/></linearGradient>
+<linearGradient id="hln" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="gln" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c0d6df"/></linearGradient>
+<linearGradient id="acn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe3a3"/><stop offset="1" stop-color="#e0a95a"/></linearGradient>
+<filter id="shn" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#0b2433" flood-opacity=".38"/></filter>
+<filter id="tsn" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#183b4a" flood-opacity=".35"/></filter>
+<clipPath id="cpn"><rect x="6" y="6" width="108" height="108" rx="22"/></clipPath>
+</defs>
+<rect x="6" y="6" width="108" height="108" rx="22" fill="url(#bgn)" filter="url(#tsn)"/>
+<g clip-path="url(#cpn)">
+
+<circle cx="60" cy="60" r="44" fill="#0f3347" opacity=".22"/>
+<g filter="url(#shn)">
+<path d="M29 90V32h12l31 38V32h12v58H72L41 52v38z" fill="url(#gln)" transform="translate(-1 0)"/>
+<circle cx="92" cy="34" r="7.5" fill="url(#acn)"/>
+</g>
+<rect x="6" y="6" width="108" height="62" fill="url(#hln)"/>
+</g>
+<rect x="7" y="7" width="106" height="106" rx="21" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="1.4"/>
+</svg>`);
 const nexolabDescription='NexoLab es una empresa ficticia que simula ofrecer soluciones digitales para Recursos Humanos. Esta demo muestra cómo sus herramientas podrían adaptarse a una organización real; para implementarla habría que adecuar los procesos, la seguridad y la infraestructura.';
 const nexolabStory=`**🧩 ¿Qué es NexoLab: ERP, CRM o HR Tech?** NexoLab es una empresa ficticia y esta página es una demostración. Un ERP integra procesos de distintas áreas y un CRM organiza la relación con clientes. NexoLab toma la idea de integrar procesos, pero se concentra en la gestión de personas. Por eso se presenta como HR Tech (Human Resources Technology): tecnología aplicada a Recursos Humanos. No es un ERP ni un CRM completo.
 
@@ -1377,7 +1389,34 @@ const nexolabProject={id:'nexolab',cat:'HR Tech',name:'NexoLab',desc:nexolabDesc
    ESTADO
 ========================================================= */
 
-const brujulaLogoData='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5b8aa8"/><stop offset="1" stop-color="#14213d"/></linearGradient></defs><circle cx="60" cy="60" r="54" fill="url(#b)"/><circle cx="60" cy="60" r="46" fill="none" stroke="#c0d6df" stroke-width="2"/><path d="M80 34 66 62 40 86 54 58z" fill="#fff"/><circle cx="60" cy="60" r="4" fill="#b08968"/></svg>`);
+const brujulaLogoData='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<defs>
+<linearGradient id="bgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f6d7a"/><stop offset="1" stop-color="#183b4a"/></linearGradient>
+<linearGradient id="hlb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="glb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c0d6df"/></linearGradient>
+<linearGradient id="acb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe3a3"/><stop offset="1" stop-color="#e0a95a"/></linearGradient>
+<filter id="shb" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="2.5" stdDeviation="2" flood-color="#0b2433" flood-opacity=".38"/></filter>
+<filter id="tsb" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#183b4a" flood-opacity=".35"/></filter>
+<clipPath id="cpb"><rect x="6" y="6" width="108" height="108" rx="22"/></clipPath>
+</defs>
+<rect x="6" y="6" width="108" height="108" rx="22" fill="url(#bgb)" filter="url(#tsb)"/>
+<g clip-path="url(#cpb)">
+
+<circle cx="60" cy="60" r="44" fill="#0f3347" opacity=".35"/>
+<g filter="url(#shb)">
+<circle cx="60" cy="60" r="40" fill="none" stroke="url(#glb)" stroke-width="5"/>
+<g stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M60 14v8M60 98v8M14 60h8M98 60h8"/></g>
+<path d="M60 24 70 60 60 96 50 60z" fill="none"/>
+<path d="M60 26 69 60H51z" fill="url(#acb)"/>
+<path d="M60 94 51 60h18z" fill="url(#glb)"/>
+<circle cx="60" cy="60" r="6.5" fill="#fff"/>
+</g>
+<circle cx="60" cy="60" r="2.8" fill="#166088"/>
+<g stroke="#fff" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"><path d="M32 32l3 3M88 32l-3 3M32 88l3-3M88 88l-3-3"/></g>
+<rect x="6" y="6" width="108" height="62" fill="url(#hlb)"/>
+</g>
+<rect x="7" y="7" width="106" height="106" rx="21" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="1.4"/>
+</svg>`);
 /* ===== CONFIGURACIÓN DE BRÚJULA: completá estas dos direcciones cuando estén listas ===== */
 const BRUJULA_URL='';      // dirección de Brújula en GitHub Pages
 const BRUJULA_WEBHOOK='';  // dirección del Webhook de n8n que recibe los currículums
